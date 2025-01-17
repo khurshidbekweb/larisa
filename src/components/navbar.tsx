@@ -13,17 +13,17 @@ const Navbar = () => {
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-3">
                 <a href="/"><img className="logo text-white" src={logo} alt="logo-image" /></a>
                 <nav className='flex items-center text-white gap-x-5 text-[16px] font-normal'>
-                    <a href="">{t('nav_one')}</a>
-                    <a href="">Мои услуги</a>
-                    <a href="">Oтзывы</a>
-                    <a href="">Контакты</a>
+                    <a href="#">{t('nav_one')}</a>
+                    <a href="#">{t('nav_two')}</a>
+                    <a href="#">{t('nav_three')}</a>
+                    <a href="#">{t('nav_four')}</a>
                 </nav>
                 <div className="flex items-center gap-x-4">
                     <select onChange={hanleLanguage} className='bg-inherit text-white outline-none'>
-                        <option value="uz">Uz</option>
-                        <option value="ru">Ru</option>
+                        <option className='bg-[#3679A4]' value="uz">Uz</option>
+                        <option className='bg-[#3679A4]' value="ru">Ru</option>
                     </select>
-                    <button className='text-[#C9A690] p-2 px-9 font-bold outline-none border border-[#C9A690] rounded-full'>Записаться</button>
+                    <button className='text-[#C9A690] p-2 px-9 font-bold outline-none border border-[#C9A690] rounded-full'>{t('sign')}</button>
                 </div>
             </div>
         </div>
