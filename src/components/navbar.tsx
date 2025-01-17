@@ -1,18 +1,25 @@
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/image/logo.png'
+import React from 'react';
 
 const Navbar = () => {
+    const {t, i18n} = useTranslation()
+    const hanleLanguage = (e: React.ChangeEvent<HTMLSelectElement>)=>{
+        i18n.changeLanguage(e.target.value)
+        localStorage.setItem("language", e.target.value)
+    }
     return (
         <div className="w-full bg-[#3679A4]">
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-3">
-                <img className="logo text-white" src={logo} alt="" />
-                <nav className='flex items-center text-white gap-x-5 text-[18px] font-normal'>
-                    <a href="">Обо мне</a>
+                <a href="/"><img className="logo text-white" src={logo} alt="logo-image" /></a>
+                <nav className='flex items-center text-white gap-x-5 text-[16px] font-normal'>
+                    <a href="">{t('nav_one')}</a>
                     <a href="">Мои услуги</a>
                     <a href="">Oтзывы</a>
                     <a href="">Контакты</a>
                 </nav>
                 <div className="flex items-center gap-x-4">
-                    <select name="" id="" className='bg-inherit text-white outline-none'>
+                    <select onChange={hanleLanguage} className='bg-inherit text-white outline-none'>
                         <option value="uz">Uz</option>
                         <option value="ru">Ru</option>
                     </select>
