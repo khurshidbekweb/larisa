@@ -14,7 +14,7 @@ i18n
       escapeValue: false, // XSS xavfsizligi (React buni avtomatik bajaradi)
     },
     backend: {
-      loadPath: '/src/locales/{{lng}}/{{ns}}.json', // Tillarni yuklash yo'li
+      loadPath: '/locales/{{lng}}/{{ns}}.json', // Tillarni yuklash yo'li
     },
   });
 
