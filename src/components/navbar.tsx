@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import logo from '../assets/image/logo.png'
 import React from 'react';
+import Menu from './menu';
 
 const Navbar = () => {
     const {t, i18n} = useTranslation()
@@ -10,9 +11,9 @@ const Navbar = () => {
     }
     return (
         <div className="w-full bg-[#3679A4]">
-            <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-3">
-                <a href="/"><img className="logo text-white" src={logo} alt="logo-image" /></a>
-                <nav className='flex items-center text-white gap-x-5 text-[16px] font-normal'>
+            <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-2 md:py-3 px-2 xl:px-0">
+                <a href="/"><img className="logo text-white w-[125px] md:w-[187px]" src={logo} alt="logo-image" /></a>
+                <nav className='items-center text-white gap-x-5 text-[16px] font-normal hidden xl:flex'>
                     <a href="#">{t('nav_one')}</a>
                     <a href="#">{t('nav_two')}</a>
                     <a href="#">{t('nav_three')}</a>
@@ -23,7 +24,8 @@ const Navbar = () => {
                         <option className='bg-[#3679A4]' value="uz">Uz</option>
                         <option className='bg-[#3679A4]' value="ru">Ru</option>
                     </select>
-                    <button className='text-[#C9A690] p-2 px-9 font-bold outline-none border border-[#C9A690] rounded-full'>{t('sign')}</button>
+                    <Menu/>
+                    <button className='text-[#C9A690] hidden xl:block p-2 px-9 font-bold outline-none border border-[#C9A690] rounded-full'>{t('sign')}</button>
                 </div>
             </div>
         </div>
