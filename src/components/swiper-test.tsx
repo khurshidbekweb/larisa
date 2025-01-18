@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
  // Agar pagination moduli ishlatilayotgan bo‘lsa
-import { Pagination } from "swiper/modules";
+import { Keyboard, Pagination } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
+import SwiperCore from 'swiper'
 import classNames from "classnames";
 import user1 from '@/assets/image/user1.jpg';
 import user2 from '@/assets/image/user2.jpg';
@@ -30,16 +31,17 @@ const SwiperCarousel: React.FC = () => {
     { id: 6, image: user4, title: "Сухость кожи" },
     { id: 7, image: user4, title: "Сухость кожи" },
   ];
-
+  const swiperRef = useRef<SwiperCore | null>(null);
   return (
     <div className=" max-w-7xl mx-auto my-10 px-2">
       <Swiper
        spaceBetween={5}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Keyboard, Pagination]}
         keyboard={{
             enabled: true,
         }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop={true}
         breakpoints={{
             370: {
@@ -63,6 +65,9 @@ const SwiperCarousel: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <button onClick={()=>swiperRef.current?.slidePrev()}> Prev</button>
+      <button onClick={()=>swiperRef.current?.slideNext()}> Next</button>
     </div>
   );
 };

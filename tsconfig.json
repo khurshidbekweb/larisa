@@ -9,6 +9,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "typeRoots": ["node_modules/@types", "./node_modules/swiper/types"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
