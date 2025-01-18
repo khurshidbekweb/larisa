@@ -9,6 +9,7 @@ const Navbar = () => {
         i18n.changeLanguage(e.target.value)
         localStorage.setItem("language", e.target.value)
     }
+    const language = localStorage.getItem('language') || 'uz'
     return (
         <div className="w-full bg-[#3679A4]">
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-2 md:py-3 px-2 xl:px-0">
@@ -20,7 +21,7 @@ const Navbar = () => {
                     <a href="#">{t('nav_four')}</a>
                 </nav>
                 <div className="flex items-center gap-x-4">
-                    <select onChange={hanleLanguage} className='bg-inherit text-white outline-none'>
+                    <select value={language} onChange={hanleLanguage} className='bg-inherit text-white outline-none'>
                         <option className='bg-[#3679A4]' value="uz">Uz</option>
                         <option className='bg-[#3679A4]' value="ru">Ru</option>
                     </select>
