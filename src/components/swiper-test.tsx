@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
  // Agar pagination moduli ishlatilayotgan bo‘lsa
@@ -9,9 +10,17 @@ import user1 from '@/assets/image/user1.jpg';
 import user2 from '@/assets/image/user2.jpg';
 import user3 from '@/assets/image/user3.jpg';
 import user4 from '@/assets/image/user4.jpg';
+import prev from '@/assets/image/prev.png'
+import next from '@/assets/image/next.png'
 
-import "swiper/css"; 
-import "swiper/css/pagination";
+
+// @ts-expect-error
+import 'swiper/css';
+// @ts-expect-error
+import 'swiper/css/navigation';
+// @ts-expect-error
+import 'swiper/css/pagination';
+
 
 // Slayd obyekti uchun interfeys
 interface Slide {
@@ -33,18 +42,18 @@ const SwiperCarousel: React.FC = () => {
   ];
   const swiperRef = useRef<SwiperCore | null>(null);
   return (
-    <div className=" max-w-7xl mx-auto my-10 px-2">
+    <div className="relative max-w-7xl mx-auto my-10 px-2">
       <Swiper
        spaceBetween={5}
         pagination={{ clickable: true }}
-        modules={[Keyboard, Pagination]}
+        modules={[Keyboard, Pagination,]}
         keyboard={{
             enabled: true,
         }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop={true}
         breakpoints={{
-            370: {
+            350: {
                 width: 370,
                 slidesPerView: 1.4,
             },
@@ -65,9 +74,10 @@ const SwiperCarousel: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <button onClick={()=>swiperRef.current?.slidePrev()}> Prev</button>
-      <button onClick={()=>swiperRef.current?.slideNext()}> Next</button>
+        <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute -bottom-1 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
+          <button className="" onClick={()=>swiperRef.current?.slidePrev()}> <img className="w-[40px] md:w-[50px]" src={prev} alt="prev" /> </button>
+          <button onClick={()=>swiperRef.current?.slideNext()}> <img className="w-[40px] md:w-[50px]" src={next} alt="next" /> </button>
+        </div>      
     </div>
   );
 };
