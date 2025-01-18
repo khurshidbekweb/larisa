@@ -75,7 +75,7 @@ const SwiperCarousel: React.FC = () => {
         ))}
       </Swiper>
         <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute -bottom-1 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
-          <button className="" onClick={()=>swiperRef.current?.slidePrev()}> <img className="w-[40px] md:w-[50px]" src={prev} alt="prev" /> </button>
+          <button onClick={()=>swiperRef.current?.slidePrev()}> <img className="w-[40px] md:w-[50px]" src={prev} alt="prev" /> </button>
           <button onClick={()=>swiperRef.current?.slideNext()}> <img className="w-[40px] md:w-[50px]" src={next} alt="next" /> </button>
         </div>      
     </div>

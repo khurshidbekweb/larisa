@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 const Instruction = () => {
     const {t} = useTranslation()
     return (
-        <div className="relative mx-auto text-center mt-10 md:mt-14">
+        <div className="relative mx-auto text-center mt-10 md:mt-20">
             <div className="w-full bg-[#E4C3AD] absolute overflow-hidden line-clamp-1 p-2 text-white text-[18px] md:text-[24px] xl:text-[40px] font-semibold md:leading-10">
                 {t('instruction')}
             </div>
