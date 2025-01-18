@@ -4,7 +4,7 @@ const Hero = () => {
     console.log(localStorage.getItem('language')?'a':'b');
     
     return (
-        <div className="bg-[#89BFDB1A]">
+        <div className="bg-[#89BFDB1A] hero_section">
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
                 <div className="flex items-center relative gap-x-10 pt-7 md:mt-12">
                     <h5 className="text-[14px] md:text-[16px] text-[#C9A690] font-montserrat font-bold uppercase">Доктор</h5>
@@ -25,7 +25,7 @@ const Hero = () => {
                         </button>
                     </div>
 
-                    <div className="doctor mt-10 md:mt-0 bg-[#89BFD9] blur-[800]">
+                    <div className="mt-10 md:mt-0 bg-[#89BFD9] blur-[800]">
                         <img src={Larisa} alt="Doctor" className="!w-[229px] !h-[300px] md:!w-[382px] md:!h-[500px] xl:!w-[421px] xl:!h-[551px] absolute -right-2 md:right-5 bottom-0 md:-bottom-20 xl:bottom-0 xl:right-44 z-10"  />
                         <span className='absolute block w-[350px] h-[350px] md:w-[800px] md:h-[800px] -right-20 md:-right-36 xl:right-12 -bottom-40 md:-bottom-[400px] xl:-bottom-72 border-4 md:border-8 z-0 rounded-full border-white '></span>
                         <span className='absolute block w-[300px] h-[300px] md:w-[650px] md:h-[650px] -right-20  md:-right-16 xl:right-28 -bottom-40 md:-bottom-[340px] xl:-bottom-52 border-4 md:border-8  rounded-full border-white '></span>
