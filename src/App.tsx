@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar";
 import SwiperCarousel from "./components/swiper-test";
 import Hero from "./sections/hero";
+import Instruction from "./sections/instruction";
 import Recommunded from "./sections/recommunded";
 import Semptomp from "./sections/semptomp";
 import Statisics from "./sections/statisics";
@@ -15,6 +16,7 @@ const App = () => {
         <Recommunded/>
         <Semptomp/>
         <SwiperCarousel/>
+        <Instruction/>
       </main>
     </>
   );
