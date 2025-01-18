@@ -1,5 +1,4 @@
 import Navbar from "./components/navbar";
-import SwiperCarousel from "./components/swiper-test";
 import Hero from "./sections/hero";
 import Instruction from "./sections/instruction";
 import Recommunded from "./sections/recommunded";
@@ -16,7 +15,6 @@ const App = () => {
         <Statisics/>
         <Recommunded/>
         <Semptomp/>
-        <SwiperCarousel/>
         <Instruction/>
         <Services/>
       </main>
