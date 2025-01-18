@@ -1,8 +1,6 @@
 import Larisa from '@/assets/image/larisa.png'
 
-const Hero = () => {
-    console.log(localStorage.getItem('language')?'a':'b');
-    
+const Hero = () => {    
     return (
         <div className="bg-[#89BFDB1A] hero_section">
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
