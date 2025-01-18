@@ -2,7 +2,7 @@ import Larisa from '@/assets/image/larisa.png'
 
 const Hero = () => {    
     return (
-        <div className="bg-[#89BFDB1A] hero_section">
+        <section className="bg-[#89BFDB1A] hero_section">
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
                 <div className="flex items-center relative gap-x-10 pt-7 md:mt-12">
                     <h5 className="text-[14px] md:text-[16px] text-[#C9A690] font-montserrat font-bold uppercase">Доктор</h5>
@@ -30,7 +30,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     );
 };

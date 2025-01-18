@@ -17,7 +17,7 @@ const Statisics = () => {
         },
     ]
     return (
-        <div className="max-w-7xl mx-auto relative container px-4  mt-10">
+        <section className="max-w-7xl mx-auto relative container px-4  mt-10">
             <div className="statisics-inner flex flex-col xl:flex-row xl:items-start xl:gap-10">
                 <div className="flex justify-between items-start gap-x-6 md:gap-x-10 w-full xl:w-[45%]">
                     <h3 className="w-[70px] md:w-20 text-[#C9A690] text-[14px] md:text-[16px] font-montserrat font-bold">{t('statisics_me')}</h3>
@@ -33,7 +33,7 @@ const Statisics = () => {
                     
                 </ul>
             </div>
-        </div>
+        </section>
     );
 };
 
