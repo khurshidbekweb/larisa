@@ -5,6 +5,7 @@ import Faq from "./sections/faq";
 import Hero from "./sections/hero";
 import Instruction from "./sections/instruction";
 import MyInfo from "./sections/my-info";
+import Onlineonsultation from "./sections/online-consultation";
 import Recommunded from "./sections/recommunded";
 import Reviews from "./sections/reviews";
 import Semptomp from "./sections/semptomp";
@@ -30,6 +31,7 @@ const App = () => {
         <Faq/>
         <Sertificate/>
         <Endocrina/>
+        <Onlineonsultation/>
       </main>
     </>
   );
