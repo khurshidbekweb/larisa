@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import Image from '@/assets/image/modal.png'
 import Icon from '@/assets/image/modal-icon.png'
 import arrow from '@/assets/image/arrow.png'
+import shadow from '@/assets/image/Vector.png'
 
 const MyService = () => {
     const {t} = useTranslation()
@@ -39,7 +40,10 @@ const MyService = () => {
     return (
         <Dialog>
             <DialogTrigger className="outline-none"><p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3">Подробнее <MoveRight /></p></DialogTrigger>
-            <DialogContent className="bg-[#FBE7E5]">
+            <DialogContent className="bg-[#FFFFFF] overflow-hidden">
+                <span className="p-12 absolute bg-gradient-to-r from-[#e9dddc] to-[#FAD4D1] -top-4 rounded-full -right-8 block"></span>
+                <span className="p-16 absolute bg-gradient-to-r from-[#b0a7a13a] to-[#dbcabf7c] top-1/4 rounded-lg -z-10 -left-8 block"></span>
+                <img className="absolute bottom-1 right-1" src={shadow} alt="" />
                 <DialogHeader>
                     <DialogTitle className="text-center">
                         <p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] font-bold">{t('my_service_t')}</p>
@@ -47,7 +51,7 @@ const MyService = () => {
                     </DialogTitle>
                     <DialogDescription>
                         <div className="mt-5">
-                            <img className="w-[70%] mx-auto h-[150px] md:w-[430px]" src={Image} alt="modal info image" />
+                            <img className="w-[90%] mx-auto h-[180px] md:w-[430px]" src={Image} alt="modal info image" />
                             <ul className="mt-7 flex flex-col space-y-2">
                                 {mySerivceInfo.map((el, i) => (
                                     <li key={i+1} className="flex items-center gap-x-4">
