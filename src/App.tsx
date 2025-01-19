@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar";
 import Advantage from "./sections/advantage";
+import Contact from "./sections/contact";
 import Endocrina from "./sections/endocrina";
 import Faq from "./sections/faq";
 import Hero from "./sections/hero";
@@ -32,6 +33,7 @@ const App = () => {
         <Sertificate/>
         <Endocrina/>
         <Onlineonsultation/>
+        <Contact/>
       </main>
     </>
   );
