@@ -7,6 +7,7 @@ import MyInfo from "./sections/my-info";
 import Recommunded from "./sections/recommunded";
 import Reviews from "./sections/reviews";
 import Semptomp from "./sections/semptomp";
+import Sertificate from "./sections/sertificate";
 import Services from "./sections/services";
 import Statisics from "./sections/statisics";
 
@@ -26,6 +27,8 @@ const App = () => {
         <Reviews/>
         <Instruction/>
         <Faq/>
+        <Sertificate/>
+        
       </main>
     </>
   );
