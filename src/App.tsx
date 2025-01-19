@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar";
 import Advantage from "./sections/advantage";
+import Faq from "./sections/faq";
 import Hero from "./sections/hero";
 import Instruction from "./sections/instruction";
 import MyInfo from "./sections/my-info";
@@ -24,6 +25,7 @@ const App = () => {
         <Advantage/>
         <Reviews/>
         <Instruction/>
+        <Faq/>
       </main>
     </>
   );
