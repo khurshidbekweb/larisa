@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar";
 import Hero from "./sections/hero";
 import Instruction from "./sections/instruction";
+import MyInfo from "./sections/my-info";
 import Recommunded from "./sections/recommunded";
 import Semptomp from "./sections/semptomp";
 import Services from "./sections/services";
@@ -17,6 +18,7 @@ const App = () => {
         <Semptomp/>
         <Instruction/>
         <Services/>
+        <MyInfo/>
       </main>
     </>
   );
