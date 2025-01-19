@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from 'swiper'
 import serviceImage from '@/assets/image/service.jpg'
 import { useTranslation } from "react-i18next";
-import { ChevronLeft, ChevronRight, MoveRight } from "lucide-react";
+import { ChevronLeft, ChevronRight,} from "lucide-react";
+import MyService from "@/modal/my-service";
 
 const SwiperService = () => {
     const swiperRef = useRef<SwiperCore | null>(null);
@@ -104,7 +105,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
             <div className="absolute service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-5 p-4">
                 <h3 className="text-lg text-[20px] md:text-[32px] font-semibold">{title}</h3>
                 <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[18px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
-                <p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3">Подробнее <MoveRight/></p>
+                <MyService/>
             </div>
         </div>
     );
