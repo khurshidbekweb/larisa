@@ -75,3 +75,23 @@ body::-webkit-scrollbar{
 .swiper-card-simptom{
   background-image: url('./assets//image/user-shadow.png');
 }
+
+.custom-swiper .swiper-slide {
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+}
+
+.custom-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.custom-swiper .swiper-slide-next,
+.custom-swiper .swiper-slide-prev {
+  transform: scale(0.9);
+  opacity: 0.75;
+}
+
+
+
+
