@@ -38,8 +38,8 @@ function SwiperTest() {
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 coverflowEffect={{
                     rotate: 0,
-                    stretch: 10, // slides distance
-                    depth: 100, // depth of the effect
+                    stretch: 2, // slides distance
+                    depth: 200, // depth of the effect
                     modifier: 2, // influence of the effect
                 }}
                 breakpoints={{
@@ -61,7 +61,7 @@ function SwiperTest() {
                 className="max-w-7xl h-[350px] xl:h-[400px] xl:px-5"
             >
                 {swiperSertificate.map((el, i) => (
-                    <SwiperSlide key={i} className="xl:-ml-3">
+                    <SwiperSlide key={i} className="xl:-ml-[14px]">
                         <img
                             className="w-[280px] h-[320px] mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] overflow-hidden transition-all transform duration-300"
                             src={el.image}

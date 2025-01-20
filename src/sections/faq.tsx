@@ -41,7 +41,7 @@ const Faq = () => {
                 <h4 className="text-[24px] font-semibold md:text-[32px] xl:text-[40px] text-center mt-5 md:mt-8 px-4">{t('faq_d')}</h4>
                 <Accordion type="single" collapsible className="w-full">
                     {faqData.map((el,i) => (
-                        <AccordionItem key={i+1} value={`item-${i + 1}`}>
+                        <AccordionItem key={i+1} value={`item-${i + 1}`} className={`${i==5?'border-none':'border-b'}`}>
                             <AccordionTrigger className="text-[18px] md:text-[20px] font-semibold hover:underline-offset-0">{el.title}</AccordionTrigger>
                             <AccordionContent className="text-[#667085] text-[14px] md:text-[16px]">
                                 {el.description}
