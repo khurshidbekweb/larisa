@@ -9,9 +9,9 @@ const Footer = () => {
     const {t} = useTranslation()
     return (
         <footer className="bg-[#1A5C7F]"> 
-            <div className="footer-inner max-w-7xl xl:py-20 md:py-10 py-5 mx-auto flex flex-col xl:flex-row xl:justify-between xl:items-start">
+            <div className="footer-inner max-w-7xl xl:py-20 md:py-10 py-5 p-4 mx-auto flex flex-col xl:flex-row xl:justify-between xl:items-start">
                 <div className="flex flex-col md:flex-row md:justify-between xl:flex-col xl:items-start xl:w-[30%]">
-                    <img src={logo} alt="footer logo" />
+                    <img className='w-[187px]' src={logo} alt="footer logo" />
                     <ul className="flex items-center gap-x-3 mt-5">
                         <li className="border p-2 rounded-full">
                             <img className='w-[30px] h-[30px]' src={insta} alt="instagram "/>
@@ -49,8 +49,8 @@ const Footer = () => {
                 </ul>
             </div>
             <hr />
-            <div className="max-w-7xl mx-auto flex justify-between items-center text-white xl:py-[35px] py-4">
-                <h4 className='text-[12px] md:text-[15px] xl:text-[16px]'>2024 © Ким Лариса Юрьевна. Все права защищены</h4>
+            <div className="max-w-7xl mx-auto flex justify-between items-center text-white xl:py-[35px] p-4">
+                <h4 className='text-[12px] md:text-[15px] xl:text-[16px] w-[150px] md:w-[80%]'>2024 © Ким Лариса Юрьевна. Все права защищены</h4>
                 <p className='text-[12px] md:text-[15px] xl:text-[16px]'>Result agency</p>
             </div>
         </footer>
