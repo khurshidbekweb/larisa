@@ -21,12 +21,12 @@ const Navbar = () => {
                     <a href="#">{t('nav_four')}</a>
                 </nav>
                 <div className="flex items-center gap-x-4">
-                    <select value={language} onChange={hanleLanguage} className='bg-inherit text-white outline-none'>
-                        <option className='bg-[#3679A4]' value="uz">Uz</option>
-                        <option className='bg-[#3679A4]' value="ru">Ru</option>
+                    <select value={language} onChange={hanleLanguage} className='bg-inherit text-[18px] text-white outline-none'>
+                        <option className='bg-[#3679A4] text-[18px]' value="uz">Uz</option>
+                        <option className='bg-[#3679A4] text-[18px]' value="ru">Ru</option>
                     </select>
                     <Menu/>
-                    <button className='text-[#C9A690] hidden xl:block p-2 px-9 font-bold outline-none border border-[#C9A690] rounded-full'>{t('sign')}</button>
+                    <button className='text-[#C9A690] hidden xl:block p-2 xl:w-[190px] text-center font-bold outline-none border border-[#C9A690] rounded-full xl:text-[16px]'>{t('sign')}</button>
                 </div>
             </div>
         </div>

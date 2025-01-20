@@ -1,25 +1,27 @@
 import Larisa from '@/assets/image/larisa.png'
+import { useTranslation } from 'react-i18next';
 
-const Hero = () => {    
+const Hero = () => { 
+    const {t} = useTranslation()   
     return (
         <section className="bg-[#89BFDB1A] hero_section">
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
                 <div className="flex items-center relative gap-x-10 pt-7 md:mt-12">
-                    <h5 className="text-[14px] md:text-[16px] text-[#C9A690] font-montserrat font-bold uppercase">Доктор</h5>
+                    <h5 className="text-[14px] md:text-[16px] text-[#C9A690] font-montserrat font-bold uppercase">{t('hero_doc')}</h5>
                     <h2 className="text-[32px] md:text-[48px] font-montserrat text-start leading-9 font-semibold">
-                        Ким Лариса Юрьевна
+                        {t('hero_doc_larina')}
                     </h2>
-                    <span className="absolute text-[60px] text-[#14274E1A] leading-[55px] md:leading-[65px] md:text-[80px] xl:text-[130px] md:p-4 xl:p-0 text-center font-montserrat font-medium">Лариса Юрьевна</span>
+                    <span className="absolute text-[60px] text-[#14274E1A] leading-[55px] md:leading-[65px] md:text-[80px] xl:text-[130px] md:p-4 xl:p-0 xl:leading-[190px] text-center font-montserrat font-medium">{t('hero_doc_fullname')}</span>
                 </div>
 
                 <div className="flex justify-between items-start md:items-end mt-5 md:mt-44">
                     <div className="max-w-[204px] flex flex-col justify-start  md:max-w-[361px] xl:max-w-[520px] xl:ml-28 z-10">
                         <p className="text-[15px] md:text-[24px] font-montserrat font-medium mt-4 leading-4 md:leading-7 xl:leading-10 md:font-semibold text-start">
-                            Гармония науки и интеграции: современный подход к вашему здоровью
+                            {t('hero_doc_d')}
                         </p>
 
                         <button className="mt-4 w-[170px] md:w-[194px] rounded-[28px] bg-[#3679A4] text-white px-4 py-3 text-[14px] font-bold">
-                            Записаться
+                            {t('sign')}
                         </button>
                     </div>
 
