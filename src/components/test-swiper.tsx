@@ -40,7 +40,7 @@ function SwiperTest() {
                     rotate: 0,
                     stretch: 10, // slides distance
                     depth: 100, // depth of the effect
-                    modifier: 2.5, // influence of the effect
+                    modifier: 2, // influence of the effect
                 }}
                 breakpoints={{
                     350: {
@@ -61,16 +61,16 @@ function SwiperTest() {
                 className="max-w-7xl h-[350px] xl:h-[400px] xl:px-5"
             >
                 {swiperSertificate.map((el, i) => (
-                    <SwiperSlide key={i} className="xl:-ml-2">
+                    <SwiperSlide key={i} className="xl:-ml-3">
                         <img
-                            className="w-[280px] h-[320px] mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] transition-all transform duration-300"
+                            className="w-[280px] h-[320px] mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] overflow-hidden transition-all transform duration-300"
                             src={el.image}
                             alt="slide_image"
                         />
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute bottom-0 z-20 left-1/2 transform -translate-x-1/2">
+            <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute bottom-0 xl:bottom-10 z-20 left-1/2 transform -translate-x-1/2">
                 <button
                     className="text-[#1A5C7F]"
                     onClick={() => swiperRef.current?.slidePrev()}
