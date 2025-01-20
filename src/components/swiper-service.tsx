@@ -96,14 +96,14 @@ interface SlideItemProps {
 const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
 
     return (
-        <div className="w-[300px] h-[365px] xl:w-[399px] xl:h-[420px] relative rounded-[40px] overflow-hidden">
+        <div className="w-[300px] h-[365px] xl:w-[379px] xl:h-[420px] relative rounded-[40px] overflow-hidden bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">
             <img
                 src={image}
                 alt={title}
                 className="w-full h-[70%] object-center"
             />
-            <div className="absolute service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-5 p-4 px-7">
-                <h3 className="text-lg text-[20px] md:text-[32px] font-semibold">{title}</h3>
+            <div className="absolute  service-bg bottom-0 w-full bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent flex flex-col items-start space-y-2 p-6 px-7">
+                <h3 className="text-lg text-[20px] md:text-[32px] font-semibold ">{title}</h3>
                 <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[18px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
                 <MyService/>
             </div>

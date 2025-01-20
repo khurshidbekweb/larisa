@@ -112,7 +112,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, isActive }) => {
         className="w-full h-full object-cover rounded-[20px]"
       />
       <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#3679A4] to-transparent p-5">
-        <h3 className="text-white text-lg text-[20px] md:text-[32px] font-semibold">
+        <h3 className="text-white text-lg text-[20px] md:text-[32px] font-semibold text-start">
           {title}
         </h3>
       </div>

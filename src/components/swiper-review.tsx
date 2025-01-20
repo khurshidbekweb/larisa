@@ -17,31 +17,31 @@ const SwiperReview = () => {
             id: 1,
             image: user,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('commit_1')
         },
         {
             id: 1,
             image: user,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('commit_2')
         },
         {
             id: 1,
             image: user,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('commit_3')
         },
         {
             id: 1,
             image: user,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('commit_4')
         },
         {
             id: 1,
             image: user,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('commit_5')
         }
     ]
     return (
@@ -112,7 +112,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
                 </div>
             </div>
             <div className="mt-4">
-                <h2 className="text-lg text-[12px] line-clamp-5 md:line-clamp-none md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]">{desc}</h2>
+                <h2 className="text-lg text-[12px] line-clamp-5 md:line-clamp-6 md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]">{desc}</h2>
                 <button className="p-2 px-8 absolute bottom-2 md:bottom-8 bg-[#D7EAF0] text-[14px] rounded-full">Диабет</button>
             </div>
         </div>
