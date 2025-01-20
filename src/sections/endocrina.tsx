@@ -13,20 +13,20 @@ const Endocrina = () => {
                 <div className="w-full relative bg-[#89BFDB1A] mt-36 xl:mt-24 xl:flex xl:items-center xl:justify-between rounded-lg">
                     <img className="block md:hidden absolute -top-20" src={mobile} alt="mobile" />
                     <img className="hidden md:block absolute left-1/4 -top-28 xl:relative xl:left-0 xl:top-0" src={desktop} alt="mobile" />
-                    <ul className="flex flex-col md:flex-row md:flex-wrap md:justify-between space-y-3 md:space-y-0 md:gap-5 pt-48 px-4 xl:w-[60%] xl:mt-[0px] xl:pt-0">
-                        <li className="flex items-center gap-x-5 xl:w-[]">
+                    <ul className="flex flex-col md:flex-row md:flex-wrap md:justify-between space-y-3 md:space-y-0 md:gap-5 pt-48 px-4 xl:w-[60%] xl:mt-[0px] xl:pt-0 xl:px-4">
+                        <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
                             <img src={soglom} alt="soglom bo'l" />
                             <p className="text-[14px] md:text-[16px]">{t('endoc_1')}</p>
                         </li>
-                        <li className="flex items-center gap-x-5 ">
+                        <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] xl:w-[320px]">
                             <img src={soglom} alt="soglom bo'l" />
                             <p className="text-[14px] md:text-[16px]">{t('endoc_2')}</p>
                         </li>
-                        <li className="flex items-center gap-x-5 ">
+                        <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
                             <img src={soglom} alt="soglom bo'l" />
                             <p className="text-[14px] md:text-[16px]">{t('endoc_3')}</p>
                         </li>
-                        <li className="flex items-center gap-x-5 ">
+                        <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
                             <img src={soglom} alt="soglom bo'l" />
                             <p className="text-[14px] md:text-[16px]">{t('endoc_4')}</p>
                         </li>

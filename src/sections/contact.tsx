@@ -33,7 +33,7 @@ const Contact = () => {
                     </li>
                 </ul>
                 <div className="relative w-full max-w-7xl mx-auto mt-8 overflow-hidden">
-                    <iframe className="w-full" src="https://yandex.ru/map-widget/v1/?um=constructor%3A361b19da28139a544398a1c050c74f3521016dc1cedc5fd31f1c26f2f86100eb&amp;source=constructor" width="1133" height="400"></iframe>
+                    <iframe className="w-full" src="https://yandex.com/map-widget/v1/?um=constructor%3Aa0f405ac06dd572f8e33bb7d368099cd72d3c83a44775e281efc14c5084a1c70&amp;source=constructor" width="955" height="465"></iframe>
                 </div>
             </div>
         </section>
