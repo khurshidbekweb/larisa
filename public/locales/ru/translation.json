@@ -80,6 +80,10 @@
     "constact_2":"Наше местоположение",
     "constact_2_d":"г. Ташкент, ул. Чинабад 10",
     "constact_3":"Время работы ",
+    "ism_input": "Имя ",
+    "familya_input": "Фамилия  ",
+    "number_input": "Номер телефона  ",
+    "hizmat_input": "Услуга  ",
     "footer_deagnostik":"Диагностика",
     "footer_adsres":"Ул. Шифокор, г. Тошкент, Узбекистан",
     "footer_org": "8:00 - 20:30 пн-сб"
