@@ -9,7 +9,7 @@ const Contact = () => {
         <section className="max-w-7xl mx-auto relative container mt-10 md:mt-14 xl:mt-20">
             <div className="recommunded-inner ">
                 <h4 className="text-[24px] xl:w-[850px] mx-auto font-semibold md:text-[32px] xl:text-[40px] text-center mt-5 md:mt-8 px-4">{t('contact')}</h4>
-                <ul className="flex flex-col space-y-3 items-start justify-center px-4">
+                <ul className="flex flex-col space-y-3 items-start justify-center px-4 xl:flex-row xl:justify-between xl:items-center xl:mt-6">
                     <li className="flex items-center gap-x-5">
                         <img src={phone} alt="telefon " />
                         <div className="flex flex-col space-y-2">
@@ -35,8 +35,6 @@ const Contact = () => {
                 <div className="relative w-full max-w-7xl mx-auto mt-8 overflow-hidden">
                     <iframe className="w-full" src="https://yandex.ru/map-widget/v1/?um=constructor%3A361b19da28139a544398a1c050c74f3521016dc1cedc5fd31f1c26f2f86100eb&amp;source=constructor" width="1133" height="400"></iframe>
                 </div>
-
-
             </div>
         </section>
     );

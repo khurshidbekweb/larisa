@@ -3,6 +3,7 @@ import Advantage from "./sections/advantage";
 import Contact from "./sections/contact";
 import Endocrina from "./sections/endocrina";
 import Faq from "./sections/faq";
+import Footer from "./sections/footer";
 import Hero from "./sections/hero";
 import Instruction from "./sections/instruction";
 import MyInfo from "./sections/my-info";
@@ -34,6 +35,7 @@ const App = () => {
         <Endocrina/>
         <Onlineonsultation/>
         <Contact/>
+        <Footer/>
       </main>
     </>
   );
