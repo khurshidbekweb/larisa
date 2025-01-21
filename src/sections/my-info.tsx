@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
-// import twoRow from '@/assets/image/two row.png'
-// import my1 from '@/assets/icons/my1.svg';
 import desktop from '@/assets/image/my-doc.png'
 import table from '@/assets/image/my_table.png'
 import mobile from '@/assets/image/my_mobile.png'
+// import my1 from '@/assets/image/my_1.png'
+// import twoRow from '@/assets/image/two row.png'
+// import leftCrook from '@/assets/image/left_crook.png'
+// import rightCrook from '@/assets/image/right_crook.png'
 
 const MyInfo = () => {
     const {t} = useTranslation()
@@ -17,41 +19,14 @@ const MyInfo = () => {
                 <img className="hidden md:block xl:hidden min-w-[490px] mx-auto" src={table} alt="" />
                 <img className="block md:hidden mx-auto min-w-[320px]" src={mobile} alt="" />
            </div>
-            {/* <ul className="relative mt-10 w-[70%] mx-auto flex flex-col xl:flex-row space-y-20">
+            {/* <ul className="mt-10 w-[328px] mx-auto">
                 <li className="flex gap-x-4 items-center">
-                    <p className="text-[14px] md:text-[18px]">{t('my_info_1')}</p>
-                    <img className="w-[50px]" src={twoRow} alt="" />
-                    <span className="bg-[#3679A4] w-[84px]  rounded-full block">
-                        <img className="p-3" src={my1} alt="" />
-                    </span>
-                </li>
-                <li className="flex gap-x-5 items-center">
-                    <span className="bg-[#3679A4] w-[84px]  rounded-full block">
-                        <img className="p-2" src={my1} alt="" />
-                    </span>
-                    <img src={twoRow} alt="" />
-                    <p className="text-[14px] md:text-[18px]">{t('my_info_2')}</p>
-                </li>
-                <li className="flex gap-x-5 items-center">
-                    <p className="text-[14px] md:text-[18px]">{t('my_info_3')}</p>
-                    <img src={twoRow} alt="" />
-                    <span className="bg-[#3679A4] w-[84px]  rounded-full block">
-                        <img className="p-3" src={my1} alt="" />
-                    </span>
-                </li>
-                <li className="">
-                    <img src={twoRow} alt="" />
-                    <span className="bg-[#3679A4] w-[84px]  rounded-full block">
-                        <img className="p-3" src={my1} alt="" />
-                    </span>
-                    <p className="text-[14px] md:text-[18px]">{t('my_info_4')}</p>
-                </li>
-                <li className="">
-                    <p className="text-[14px] md:text-[18px]">{t('my_info_5')}</p>
-                    <img src={twoRow} alt="" />
-                    <span className="bg-[#3679A4] w-[84px]  rounded-full block">
-                        <img className="p-3" src={my1} alt="" />
-                    </span>
+                    <p className="text-[14px] md:text-[18px] font-bold">{t('my_info_1')}</p>
+                    <div className="relative w-[200px] flex items-center gap-3">
+                        <img className="w-[50px]" src={twoRow} alt="" />
+                        <img className="w-[84px]" src={my1} alt="" />
+                        <img className="absolute -z-10 top-0 right-[52px]" src={rightCrook} alt="crookle shadow" />
+                    </div>
                 </li>
             </ul> */}
         </div>

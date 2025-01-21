@@ -90,6 +90,7 @@ body::-webkit-scrollbar{
 .custom-swiper .swiper-slide-prev {
   transform: scale(0.9);
   opacity: 0.75;
+  
 }
 
 

@@ -17,7 +17,7 @@ const SignUp = () => {
                 <p className="text-white text-[20px] md:text-[24px] xl:text-[20px] font-bold">{t('sign')}</p>
                 <MoveRight className="text-white ml-10 md:ml-16 xl:ml-12" />
             </DialogTrigger>
-            <DialogContent className='sm:max-w-[687px]'>
+            <DialogContent className='xl:max-w-[680px] sm:max-w-[687px]'>
                 <DialogHeader>
                     <DialogTitle className='text-[28px] md:text-[40px] xl:text-[50px] text-center'>{t('sign')}</DialogTitle>
                     <DialogDescription>

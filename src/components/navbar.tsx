@@ -14,11 +14,11 @@ const Navbar = () => {
         <div className="w-full bg-[#3679A4]">
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-2 md:py-3 px-2 xl:px-0">
                 <a href="/"><img className="logo text-white w-[125px] md:w-[187px]" src={logo} alt="logo-image" /></a>
-                <nav className='items-center text-white gap-x-5 text-[16px] font-normal hidden xl:flex'>
-                    <a href="#">{t('nav_one')}</a>
-                    <a href="#">{t('nav_two')}</a>
-                    <a href="#">{t('nav_three')}</a>
-                    <a href="#">{t('nav_four')}</a>
+                <nav className='items-center text-white gap-x-7 text-[16px] font-normal hidden xl:flex'>
+                    <a className='xl:text-[18px]' href="#">{t('nav_one')}</a>
+                    <a className='xl:text-[18px]' href="#">{t('nav_two')}</a>
+                    <a className='xl:text-[18px]' href="#">{t('nav_three')}</a>
+                    <a className='xl:text-[18px]' href="#">{t('nav_four')}</a>
                 </nav>
                 <div className="flex items-center gap-x-4">
                     <select value={language} onChange={hanleLanguage} className='bg-inherit text-[18px] text-white outline-none'>
