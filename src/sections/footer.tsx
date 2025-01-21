@@ -1,7 +1,5 @@
 import logo from '@/assets/image/logo.png'
-import insta from '@/assets/image/instagram.png'
 import telegram from '@/assets/image/telegran.png'
-import whatsUp from "@/assets/image/whats'up.png"
 import phone from '@/assets/image/phone-footer.png'
 import { useTranslation } from 'react-i18next'
 
@@ -14,16 +12,14 @@ const Footer = () => {
                     <img className='w-[187px]' src={logo} alt="footer logo" />
                     <ul className="flex items-center gap-x-3 mt-5">
                         <li className="border p-2 rounded-full">
-                            <img className='w-[30px] h-[30px]' src={insta} alt="instagram "/>
+                            <a href="https://t.me/endokimlarisa" target='_blank'>
+                                <img className='w-[30px] h-[30px]' src={telegram} alt="instagram "/>
+                            </a>
                         </li>
                         <li className="border p-2 rounded-full">
-                            <img className='w-[30px] h-[30px]' src={telegram} alt="instagram "/>
-                        </li>
-                        <li className="border p-2 rounded-full">
-                            <img className='w-[30px] h-[30px]' src={whatsUp} alt="instagram "/>
-                        </li>
-                        <li className="border p-2 rounded-full">
-                            <img className='w-[30px] h-[30px]' src={phone} alt="instagram "/>
+                            <a href="tel:+998909418549">
+                                <img className='w-[30px] h-[30px]' src={phone} alt="instagram "/>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -42,9 +38,9 @@ const Footer = () => {
                     </li>
                     <li className='flex flex-col items-start'>
                         <h2 className='text-[20px] md:text-[20px] xl:text-[24px] font-bold'>{t('Контакты')}</h2>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="#">+(998) 93 248 10 50</a>
+                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="tel:+998909418549">+(998) 90 941 85 49</a>
                         <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('footer_org')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('footer_adsres')}</a>
+                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('constact_2_d')}</a>
                     </li>
                 </ul>
             </div>

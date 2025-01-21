@@ -14,7 +14,7 @@ const Contact = () => {
                         <img src={phone} alt="telefon " />
                         <div className="flex flex-col space-y-2">
                             <p className="text-[14px] md:text-[18px] xl:text-[24px] font-semibold">{t('constact_1')}</p>
-                            <p className="text-[14px] md:text-[18px] xl:text-[24px] text-[#A6A6A6] font-semibold">+998 50 900 47 38</p>
+                            <p className="text-[14px] md:text-[18px] xl:text-[24px] text-[#A6A6A6] font-semibold">+998 90 941 85 49</p>
                         </div>
                     </li>
                     <li className="flex items-center gap-x-5">
@@ -28,7 +28,7 @@ const Contact = () => {
                         <img src={time} alt="telefon " />
                         <div className="flex flex-col space-y-2">
                             <p className="text-[14px] md:text-[18px] xl:text-[24px] font-semibold">{t('constact_3')}</p>
-                            <p className="text-[14px] md:text-[18px] xl:text-[24px] text-[#A6A6A6] font-semibold">8:00-18:00</p>
+                            <p className="text-[14px] md:text-[18px] xl:text-[24px] text-[#A6A6A6] font-semibold">9:00-15:00</p>
                         </div>
                     </li>
                 </ul>
