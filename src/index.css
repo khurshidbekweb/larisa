@@ -102,4 +102,31 @@ body::-webkit-scrollbar{
 }
 
 
+/* Faol slayd */
+.test-swiper .swiper-slide-active {
+  transform: translateY(0px) scale(1) !important;  /* Markaziy slayd yuqoriga ko'tarilgan va kattalashtirilgan */
+  z-index: 10; /* Faol slaydni oldingi qatlamga olib chiqamiz */
+  transition: transform 0.3s ease;
+}
 
+/* Oldingi slayd (chap tomonda) */
+.test-swiper .swiper-slide-prev {
+  transform: translateY(50px) scale(0.9) rotate(-10deg) !important; /* Yon tomonda pastroqqa tushadi va burchak ostida egiladi */
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+/* Keyingi slayd (o'ng tomonda) */
+.test-swiper .swiper-slide-next {
+  transform: translateY(50px) scale(0.9) rotate(10deg) !important; /* Yon tomonda pastroqqa tushadi va qarama-qarshi burchak ostida egiladi */
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+/* Boshqa slaydlar */
+.test-swiper .swiper-slide {
+  opacity: 1; /* Faol bo'lmagan slaydlarni xira qilish */
+  transform: translateY(50px) scale(0.8); /* Slaydlarni pastga tushirib, kichraytirish */
+  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}

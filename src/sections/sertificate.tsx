@@ -1,4 +1,4 @@
-import SwiperTest from "@/components/test-swiper";
+import SwiperTest from "@/components/swiper-sertificat";
 import { useTranslation } from "react-i18next";
 
 const Sertificate = () => {

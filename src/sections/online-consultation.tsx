@@ -27,7 +27,7 @@ const Onlineonsultation = () => {
                     <span className="absolute w-[500px] h-[500px] bg-[#1A5C7F1A] rounded-full -left-44 -bottom-64 md:-left-24 md:-bottom-44"></span>
                     <span className="absolute w-[500px] h-[500px] bg-[#1A5C7F1A] rounded-full -left-36 -bottom-56"></span>
                 </div>
-                <img className="absolute bottom-0 z-10 left-0 w-[190px] h-[249px] md:w-[255px] md:h-[322px] xl:left-20 object-center" src={doctor} alt="doctor" />
+                <img className="absolute bottom-0 z-10 left-0 w-[190px] h-[270px] md:w-[255px] md:h-[372px] xl:left-20 object-cover" src={doctor} alt="doctor" />
                 <button className="absolute inline-block -bottom-12 right-0 w-[160px] h-[160px] md:w-[270px] md:h-[270px] xl:w-[200px] xl:h-[200px] md:-bottom-24 md:right-4 xl:-bottom-16 xl:right-28 rounded-full bg-[#1A5C7F33] text-center">
                     <SignUp/>
                 </button>

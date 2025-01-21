@@ -1,18 +1,31 @@
-import { useRef } from "react";
-import { Keyboard, Pagination } from "swiper/modules";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from 'swiper'
-import { useTranslation } from "react-i18next";
-
+import { Pagination } from "swiper/modules";
+// @ts-expect-error
+import "swiper/css";
+// @ts-expect-error
+import "swiper/css/pagination";
 import user from '@/assets/image/review-user.jpg'
 import star from '@/assets/image/star.png'
 import prev from '@/assets/image/prev.png'
 import next from '@/assets/image/next.png'
+import { useTranslation } from "react-i18next";
+import { useRef } from "react";
+import SwiperCore from 'swiper'
 
-const SwiperReview = () => {
+
+interface Testimonial {
+    id: number;
+    title: string;
+    image:string,
+    description:string
+}
+
+
+const ReviewSwiper: React.FC = () => {
     const swiperRef = useRef<SwiperCore | null>(null);
-    const { t } = useTranslation()
-    const slides = [
+    const {t} = useTranslation()
+    const testimonials: Testimonial[] = [
         {
             id: 1,
             image: user,
@@ -85,19 +98,18 @@ const SwiperReview = () => {
             title: t('service_card1'),
             description: t('commit_12')
         },
-    ]
+    ];
     return (
-        <div className="relative max-w-7xl mx-auto my-10 px-2">
+        <div className="py-10 relative">
             <Swiper
-            spaceBetween={10}
                 pagination={{ clickable: true }}
-                modules={[Keyboard, Pagination,]}
-                keyboard={{
-                    enabled: true,
-                }}
+                grabCursor={true}
+                centeredSlides={true}
+                loop={true}
+                spaceBetween={30}
+                modules={[Pagination,]} 
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                centeredSlides={true} // Markazda joylashgan slayd
-                loop={true} // Cheksiz aylanish
+                className="max-w-7xl mx-auto test-swiper h-[500px]"
                 breakpoints={{
                     350: {
                         width: 370,
@@ -112,15 +124,14 @@ const SwiperReview = () => {
                         slidesPerView: 3.4,
                     }
                 }}
-                className="custom-swiper h-[420px] md:h-[440px] xl:h-[480px]"
-                >
-                {slides.map((slide) => (
-                    <SwiperSlide key={slide.id}>
+            >
+                {testimonials.map((slide, index) => {
+                    return (<SwiperSlide key={index} className="flex justify-center items-end">
                         <SlideItem image={slide.image} title={slide.title} desc={slide.description}/>
-                    </SwiperSlide>
-                ))}
+                    </SwiperSlide>)
+                })}
             </Swiper>
-            <div className="flex justify-between items-center w-[280px] md:w-[300px] absolute bottom-0 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
+            <div className="flex justify-between items-center w-[280px] md:w-[300px] absolute bottom-0 md:bottom-8 z-20 left-1/2 transform -translate-x-1/2">
                 <button className="" onClick={() => swiperRef.current?.slidePrev()}> <img className="w-[40px] md:w-[50px]" src={prev} alt="prev" /> </button>
                 <button className="" onClick={() => swiperRef.current?.slideNext()}> <img className="w-[40px] md:w-[50px]" src={next} alt="next" /> </button>
             </div>
@@ -128,7 +139,7 @@ const SwiperReview = () => {
     );
 };
 
-export default SwiperReview;
+export default ReviewSwiper;
 
 // Slayd komponenti uchun tiplash
 interface SlideItemProps {
@@ -141,7 +152,7 @@ interface SlideItemProps {
 const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
 
     return (
-        <div className="w-[231px] bg-white p-6 h-[277px] md:w-[399px] md:h-[362px] relative rounded-[40px] overflow-hidden">
+        <div className="w-[270px] bg-white p-6 h-[300px] md:w-[399px] md:h-[362px] relative rounded-[40px] overflow-hidden">
             <div className="flex items-center gap-3">
                 <img
                     src={image}
@@ -160,4 +171,3 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
         </div>
     );
 };
-
