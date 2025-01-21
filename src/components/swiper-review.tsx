@@ -42,7 +42,50 @@ const SwiperReview = () => {
             image: user,
             title: t('service_card1'),
             description: t('commit_5')
-        }
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_6')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_7')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_8')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_9')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_10')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_11')
+        },
+        {
+            id: 1,
+            image: user,
+            title: t('service_card1'),
+            description: t('commit_12')
+        },
+
     ]
     return (
         <div className="relative max-w-7xl mx-auto my-10 px-2">
@@ -78,7 +121,7 @@ const SwiperReview = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute bottom-0 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
+            <div className="flex justify-between items-center w-[280px] md:w-[300px] absolute bottom-0 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
                 <button className="" onClick={() => swiperRef.current?.slidePrev()}> <img className="w-[40px] md:w-[50px]" src={prev} alt="prev" /> </button>
                 <button className="" onClick={() => swiperRef.current?.slideNext()}> <img className="w-[40px] md:w-[50px]" src={next} alt="next" /> </button>
             </div>
