@@ -71,6 +71,8 @@ body::-webkit-scrollbar{
 
 .hero_section{
   background-image: url('./assets//image/shadow_dog.png');
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 .swiper-card-simptom{
   background-image: url('./assets//image/user-shadow.png');
@@ -91,6 +93,12 @@ body::-webkit-scrollbar{
   transform: scale(0.9);
   opacity: 0.75;
   
+}
+
+.bg-card-service{
+  background-image: url('./assets//image/shadow-service.png');
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 

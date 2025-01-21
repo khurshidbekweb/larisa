@@ -64,7 +64,7 @@ const SwiperService = () => {
                     },
                     1400: {
                         width: 1400,
-                        slidesPerView: 3.2,
+                        slidesPerView: 3.4,
                     }
                 }}
                 className="mySwiper h-[420px] md:h-[440px] xl:h-[480px]"
@@ -96,14 +96,16 @@ interface SlideItemProps {
 const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
 
     return (
-        <div className="w-[300px] h-[365px] xl:w-[379px] xl:h-[420px] relative rounded-[40px] overflow-hidden bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">
+        <div className="w-[300px] h-[365px] xl:w-[379px] xl:h-[420px] relative rounded-[40px] overflow-hidden ">
             <img
                 src={image}
                 alt={title}
-                className="w-full h-[70%] object-center"
+                className="w-full h-[300px] md:h-[354px] xl:h-[399px] object-center"
             />
-            <div className="absolute  service-bg bottom-0 w-full bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent flex flex-col items-start space-y-2 p-6 px-7">
-                <h3 className="text-lg text-[20px] md:text-[32px] font-semibold ">{title}</h3>
+            <div className="absolute top-[268px] w-full px-7 py-4 text-start bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">
+                <h3 className="bg-card-service text-lg text-[20px] md:text-[32px] scroll-pb-4 font-semibold ">{title}</h3>
+            </div>
+            <div className="absolute  service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-2 pb-3 px-7 bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">                            
                 <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[18px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
                 <MyService/>
             </div>

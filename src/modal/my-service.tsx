@@ -49,7 +49,7 @@ const MyService = () => {
                         <p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] font-bold">{t('my_service_t')}</p>
                         <p className="text-[24px] md:text-[32px] xl:text-[40px] font-semibold">{t('my-service_de')}</p>
                     </DialogTitle>
-                    <DialogDescription className="xl:w-[90%] mx-auto">
+                    <DialogDescription className="xl:max-w-[90%] mx-auto">
                         <div className="mt-5 xl:flex xl:flex-row-reverse">
                             <img className="w-[90%] mx-auto h-[180px] md:h-[300px] md:w-[430px]" src={Image} alt="modal info image" />
                             <div className="">
@@ -67,7 +67,7 @@ const MyService = () => {
                                 <div className="relative w-full mt-2 md:mt-8 md:p-3">
                                     <p className="text-start text-[13px] md:text-[18px] w-full xl:text-[20px] md:w-[88%]">{t('modal_u')}</p>
                                     <img className="ml-10 md:ml-80" src={arrow} alt="arrow" />
-                                    <button className="absolute text-[#C9A690] p-2 px-7 bottom-10 md:bottom-14 md:right-14 xl:right-36 font-bold outline-none border border-[#C9A690] rounded-full">{t('sign')}</button>
+                                    <button className="absolute text-[#C9A690] p-2 px-7 bottom-10 md:bottom-14 md:right-14 xl:right-20 font-bold outline-none border border-[#C9A690] rounded-full">{t('sign')}</button>
                                 </div>
                             </div>
                                 
