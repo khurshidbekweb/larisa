@@ -7,11 +7,15 @@ import user5 from "@/assets/image/user5.jpg";
 
 
 
+interface ISliderData {
+  id: number;
+  image: string;
+  title: { ru: string; uz: string };
+}
 
 
 
-
-export const SliderData = [
+export const SliderData: ISliderData[] = [
   { id: 1, image: user1, title: { ru: "Слабость", uz: "Zaiflik" } },
   { id: 2, image: user2, title: { ru: "Скачки веса", uz: "Vazn o'zgarishi" } },
   { id: 3, image: user3, title: { ru: "Выпадение волос", uz: "Soch to'kilishi" } },
