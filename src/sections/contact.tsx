@@ -6,7 +6,7 @@ import time from '@/assets/image/time.png'
 const Contact = () => {
     const {t} = useTranslation()
     return (
-        <section className="max-w-7xl mx-auto relative container mt-10 md:mt-14 xl:mt-20">
+        <section id="contact" className="max-w-7xl mx-auto relative container mt-10 md:mt-14 xl:mt-20">
             <div className="recommunded-inner ">
                 <h4 className="text-[24px] xl:w-[850px] mx-auto font-semibold md:text-[32px] xl:text-[40px] text-center mt-5 md:mt-8 px-4">{t('contact')}</h4>
                 <ul className="flex flex-col space-y-3 items-start justify-center px-4 xl:flex-row xl:justify-between xl:items-center xl:mt-6">
