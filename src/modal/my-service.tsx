@@ -55,11 +55,12 @@ const MyService = () => {
                             <div className="">
                                 <ul className="mt-7 flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
                                     {mySerivceInfo.map((el, i) => (
-                                        <li key={i+1} className="flex items-center gap-x-4 md:w-[304px]">
+                                        <li key={i+1} className="flex items-start gap-x-4 md:w-[304px]">
                                             <img className="w-14 h-14" src={el.image} alt="modal icon info" />
                                             <div className="text-start text-black">
-                                                <h3 className=" text-[16px] xl:text-[20px] font-bold">{el.title}</h3>
-                                                <p className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-medium leading-4">{el.description}</p>
+                                                <h3 className=" text-[16px] xl:text-[20px] font-semibold">{el.title}</h3>
+                                                <p className="mt-1 text-[12px] md:text-[14px] xl:text-[18px] font-medium leading-4">{el.description}</p>
+                                                <p className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">400 000</p></p>
                                             </div>
                                         </li>
                                     ))}
