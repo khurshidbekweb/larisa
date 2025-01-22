@@ -26,7 +26,7 @@ const Advantage = () => {
     },
 ]
   return (
-    <section className="mx-auto  container my-10 md:mt-14 xl:mt-20">
+    <section className="mx-auto  container mt-10 md:mt-14 xl:mt-20">
         <div className="my-info-inner px-2 text-center">
             <h4 className="text-[#C9A690] font-bold text-[14px] md:text-[16px] text-center">{t('advantage_t')}</h4>
             <h2 className="text-[24px] font-semibold md:text-[32px] xl:text-[40px] text-center mt-3 md:mt-5 px-4">{t('advantage_d')}</h2>
