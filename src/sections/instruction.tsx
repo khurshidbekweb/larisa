@@ -11,7 +11,7 @@ const Instruction = () => {
                         "marquee",
                         {
                         className:"text-lg text-white text-[18px] p-2 md:text-[24px] xl:text-[40px] font-semibold md:font-bold md:leading-10",
-                        scrollamount: "12", // Animatsiya tezligi
+                        scrollamount: "8", // Animatsiya tezligi
                         direction: "left" 
                         },
                         t('instruction'), t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction')
@@ -24,7 +24,7 @@ const Instruction = () => {
                         "marquee",
                         {
                         className:"text-lg text-white text-[18px] p-2 md:text-[24px] xl:text-[40px] font-semibold md:font-bold md:leading-10",
-                        scrollamount: "12", // Animatsiya tezligi
+                        scrollamount: "8", // Animatsiya tezligi
                         direction: "left" 
                         },
                         t('instruction'), t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction'),t('instruction')
