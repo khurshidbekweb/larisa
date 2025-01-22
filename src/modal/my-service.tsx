@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/dialog";
 import { MoveRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import Image from '@/assets/image/modal.png'
 import arrow from '@/assets/image/arrow.png'
 import shadow from '@/assets/image/Vector.png'
 interface modalINfo{
@@ -21,10 +20,12 @@ interface propsService{
     image:string,
     desc:string,
     title:string,
-    modalInfo: modalINfo[]
+    modalInfo: modalINfo[],
+    summa:string,
+    mainImage:string
 }
 
-const MyService = ({desc, image, title, modalInfo}:propsService) => {
+const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsService) => {
     const {t} = useTranslation()
     return (
         <Dialog>
@@ -55,19 +56,19 @@ const MyService = ({desc, image, title, modalInfo}:propsService) => {
                     </DialogTitle>
                     <DialogDescription className="xl:max-w-[90%] mx-auto">
                         <div className="mt-5 xl:flex xl:flex-row-reverse">
-                            <img className="w-[90%] mx-auto h-[180px] md:h-[300px] md:w-[430px]" src={Image} alt="modal info image" />
+                            <img className="w-[90%] mx-auto h-[180px] md:h-[300px] md:w-[430px]" src={mainImage} alt="modal info image" />
                             <div className="">
                                 <ul className="mt-7 flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
                                     {modalInfo.map((el, i) => (
                                         <li key={i+1} className="flex items-start gap-x-4 md:w-[304px]">
                                             <img className="w-14 h-14" src={el.image} alt="modal icon info" />
                                             <div className="text-start text-black">
-                                                <h3 className=" text-[16px] xl:text-[20px] font-semibold">{el.title}</h3>
-                                                <p className="mt-1 text-[12px] md:text-[14px] xl:text-[18px] font-medium leading-4">{el.description}</p>
+                                                <h3 className=" text-[14px] xl:text-[18px] font-semibold">{el.title}</h3>
+                                                <p className="mt-1 text-[11px] md:text-[13px] xl:text-[16px] font-medium leading-4">{el.description}</p>
                                             </div>
                                         </li>
                                     ))}
-                                <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">400 000</p></li>
+                                <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa} {t('sum')}</p></li>
                                 </ul>
                                 <div className="relative w-full mt-2 md:mt-8 md:p-3">
                                     <p className="text-start text-[13px] md:text-[18px] w-full xl:text-[20px] md:w-[88%]">{t('modal_u')}</p>
