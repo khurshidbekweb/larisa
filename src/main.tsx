@@ -5,8 +5,10 @@ import App from './App.tsx'
 import './i18n'
 import './font'
 
+
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+<StrictMode>
+  
     <App />
   </StrictMode>,
 )

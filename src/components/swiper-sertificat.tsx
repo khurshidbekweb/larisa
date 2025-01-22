@@ -5,11 +5,9 @@ import 'swiper/css';
 // @ts-expect-error
 import 'swiper/css/effect-coverflow';
 // @ts-expect-error
-import 'swiper/css/pagination';
-// @ts-expect-error
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 import slide_image_1 from '@/assets/image/sertificate.png';
 import slide_image_2 from '@/assets/image/ser_d_2.png';

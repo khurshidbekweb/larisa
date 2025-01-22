@@ -16,6 +16,7 @@ import Services from "./sections/services";
 import Statisics from "./sections/statisics";
 
 const App = () => {
+  
   return (
     <>
       <Navbar/>

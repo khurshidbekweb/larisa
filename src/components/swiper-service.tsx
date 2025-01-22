@@ -6,6 +6,12 @@ import serviceImage1 from '@/assets/image/servicw1.jpg'
 import serviceImage2 from '@/assets/image/usliga konsultatsiya.jpg'
 import serviceImage3 from '@/assets/image/usluga diagnostika.jpg'
 import serviceImage4 from '@/assets/image/usluga lichenya.jpg'
+import modal1 from '@/assets/image/modal1.png'
+import modal2 from '@/assets/image/modal2.png'
+import modal3 from '@/assets/image/modal3.png'
+import modal4 from '@/assets/image/modal4.png'
+import modal5 from '@/assets/image/modal5.png'
+import modal6 from '@/assets/image/modal6.png'
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight,} from "lucide-react";
 import MyService from "@/modal/my-service";
@@ -18,25 +24,164 @@ const SwiperService = () => {
             id: 1,
             image: serviceImage1,
             title: t('service_card1'),
-            description: t('service_des1')
+            description: t('service_des1'),
+            summa: '400 000',
+            modalInfo: [
+                {
+                    image: modal1,
+                    title: t('service_1_1_t'),
+                    description:t('service_1_1_d'),
+                },
+                {
+                    image: modal2,
+                    title: t('service_1_2_t'),
+                    description:t('service_1_2_d'),
+                },
+                {
+                    image: modal3,
+                    title: t('service_1_3_t'),
+                    description:t('service_1_3_d'),
+                },
+                {
+                    image: modal4,
+                    title: t('service_1_4_t'),
+                    description:t('service_1_4_d'),
+                },
+                {
+                    image: modal5,
+                    title: t('service_1_5_t'),
+                    description:t('service_1_5_d'),
+                },
+                {
+                    image: modal6,
+                    title: t('service_1_6_t'),
+                    description:t('service_1_6_d'),
+                },
+            ]
         },        
         {
             id: 2,
             image: serviceImage3,
             title: t('service_card2'),
-            description: t('service_des2')
+            description: t('service_des2'),
+            summa: '420 000',
+            modalInfo: [
+                {
+                    image: modal1,
+                    title: t('service_2_1_t'),
+                    description:t('service_2_1_d'),
+                },
+                {
+                    image: modal2,
+                    title: t('service_2_2_t'),
+                    description:t('service_2_2_d'),
+                },
+                {
+                    image: modal3,
+                    title: t('service_2_3_t'),
+                    description:t('service_2_3_d'),
+                },
+                {
+                    image: modal4,
+                    title: t('service_2_4_t'),
+                    description:t('service_2_4_d'),
+                },
+            ]
         },
         {
             id: 3,
             image: serviceImage4,
             title: t('service_card3'),
-            description: t('service_des3')
+            description: t('service_des3'),
+            summa: '400 000',
+            modalInfo: [
+                {
+                    image: modal1,
+                    title: t('service_3_1_t'),
+                    description:t('service_3_1_d'),
+                },
+                {
+                    image: modal2,
+                    title: t('service_3_2_t'),
+                    description:t('service_3_2_d'),
+                },
+                {
+                    image: modal3,
+                    title: t('service_3_3_t'),
+                    description:t('service_3_3_d'),
+                },
+                {
+                    image: modal4,
+                    title: t('service_3_4_t'),
+                    description:t('service_3_4_d'),
+                },
+            ]
         },
         {
             id: 4,
             image: serviceImage2,
             title: t('service_card4'),
-            description: t('service_des4')
+            description: t('service_des4'),
+            modalInfo: [
+                {
+                    image: modal1,
+                    title: t('service_4_1_t'),
+                    description:t('service_4_1_d'),
+                },
+                {
+                    image: modal2,
+                    title: t('service_4_2_t'),
+                    description:t('service_4_2_d'),
+                },
+                {
+                    image: modal3,
+                    title: t('service_4_3_t'),
+                    description:t('service_4_3_d'),
+                },
+                {
+                    image: modal4,
+                    title: t('service_4_4_t'),
+                    description:t('service_4_4_d'),
+                },
+                {
+                    image: modal5,
+                    title: t('service_4_5_t'),
+                    description:t('service_4_5_d'),
+                },
+                {
+                    image: modal6,
+                    title: t('service_4_6_t'),
+                    description:t('service_4_6_d'),
+                },
+            ]
+        },
+        {
+            id: 5,
+            image: serviceImage2,
+            title: t('service_card5'),
+            description: t('service_des5'),
+            modalInfo: [
+                {
+                    image: modal1,
+                    title: t('service_5_1_t'),
+                    description:t('service_5_1_d'),
+                },
+                {
+                    image: modal2,
+                    title: t('service_5_2_t'),
+                    description:t('service_5_2_d'),
+                },
+                {
+                    image: modal3,
+                    title: t('service_5_3_t'),
+                    description:t('service_5_3_d'),
+                },
+                {
+                    image: modal4,
+                    title: t('service_5_4_t'),
+                    description:t('service_5_4_d'),
+                },
+            ]
         },
     ]
     return (
@@ -64,11 +209,11 @@ const SwiperService = () => {
                         slidesPerView: 3.4,
                     }
                 }}
-                className="mySwiper h-[420px] md:h-[440px] xl:h-[480px]"
-            >
+                className="mySwiper h-[420px] md:h-[440px] xl:h-[500px]"
+                >
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id}>
-                        <SlideItem image={slide.image} title={slide.title} desc={slide.description}/>
+                        <SlideItem image={slide.image} title={slide.title} desc={slide.description} modalInfo={slide.modalInfo} />
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -82,31 +227,25 @@ const SwiperService = () => {
 
 export default SwiperService;
 
+interface modalINfo{
+    description:string,
+    image:string,
+    title:string
+}
+
 // Slayd komponenti uchun tiplash
 interface SlideItemProps {
     image: string;
     title: string;
     desc:string
+    modalInfo: modalINfo[]
 }
 
 // Har bir slayd elementi
-const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
+const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc, modalInfo }) => {
 
     return (
-        <div className="w-[300px] h-[365px] xl:w-[379px] xl:h-[420px] relative rounded-[40px] overflow-hidden ">
-            <img
-                src={image}
-                alt={title}
-                className="w-full h-[300px] md:h-[354px] xl:h-[399px] object-cover"
-            />
-            <div className="absolute flex flex-col justify-end top-[175px] md:top-[165px] xl:top-[218px] w-full px-7 py-4 text-start h-[104px] bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">
-                <h3 className="bg-card-service text-lg text-[20px] md:text-[30px] font-semibold ">{title}</h3>
-            </div>
-            <div className="absolute  service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-2 pb-3 px-7 bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">                            
-                <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[18px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
-                <MyService/>
-            </div>
-        </div>
+        <MyService desc={desc} image={image} title={title} modalInfo={modalInfo}/>
     );
 };
 
