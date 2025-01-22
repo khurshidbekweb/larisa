@@ -11,8 +11,8 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-import slide_image_1 from '@/assets/image/sertificate.png';
-import slide_image_2 from '@/assets/image/sertifikat_1.png';
+import slide_image_1 from '@/assets/image/ser_m_1.png';
+import slide_image_2 from '@/assets/image/ser_m_2.png';
 import slide_image_3 from '@/assets/image/sertifikat_2.png';
 import slide_image_4 from '@/assets/image/sertifikat_3.png';
 import { useRef } from 'react';
@@ -66,9 +66,13 @@ function SwiperTest() {
                 {swiperSertificate.map((el, i) => (
                     <SwiperSlide key={i} className="xl:-ml-[14px]">
                         <img
-                            className="w-[280px] h-[320px] mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] overflow-hidden transition-all transform duration-300"
+                            className="!w-[280px] h-[320px] mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] object-contain transition-all transform duration-300"
                             src={el.image}
                             alt="slide_image"
+                            style={{
+                                boxShadow: 'none', // Removes shadow
+                                background: 'none', // Removes overlay background
+                            }}
                         />
                     </SwiperSlide>
                 ))}
