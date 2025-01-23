@@ -170,8 +170,8 @@ const [showText, setShowText] = useState(false)
                 </div>
             </div>
             <div className="mt-4">
-                <p  className={`text-lg text-[12px] ${showText ? 'line-clamp-none': "line-clamp-5 md:line-clamp-6"}  md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]`}>{desc}</p>
-                <button className={`${desc.length>150 ?'block md:hidden':'md:hidden'} text-[#C9A690] pb-2 text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`} onClick={() => setShowText(e => !e)}>{showText ? t('service_close'):t('open_service')} <MoveRight /></button>
+                <p  className={`text-lg text-[12px] ${showText ? 'line-clamp-none': "line-clamp-5"}  md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]`}>{desc}</p>
+                <button className={`${desc.length>170 ?'block mt-2 md:hidden':'md:hidden mt-0'} text-[#C9A690] pb-2 text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`} onClick={() => setShowText(e => !e)}>{showText ? t('service_close'):t('open_service')} <MoveRight /></button>
                 <button className={` md:mt-10 p-2 px-8 bg-[#D7EAF0] text-[14px] rounded-full`}>{t('review_add')}</button>
             </div>
         </div>

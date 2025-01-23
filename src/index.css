@@ -115,25 +115,32 @@ body::-webkit-scrollbar{
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.sertificate-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
 
-@media (max-width: 1440px) {
-  .sertificate-swiper .swiper-slide {
-    display: flex;
-    justify-content: center; /* Slaydni gorizontal markazlash */
-    align-items: center; /* Slaydni vertikal markazlash */
-    transition: transform 0.3s ease-in-out; /* Silliq harakat */
-  }
-  
+.sertificate-swiper .swiper-slide-active {
+  transform: scale(1.1);
+  z-index: 10;
+  margin-left: -50px;
+}
+
+
+@media (max-width: 1240px){
   .sertificate-swiper .swiper-slide-active {
-    transform: scale(1.1); /* Active slaydni biroz kattalashtirish */
-    z-index: 10; /* Active slayd oldinda bo‘lishi uchun */
-    margin-left: -140px !important;
+    transform: scale(1.1);
+    z-index: 10;
+    margin-left: -70px !important; /* !important qo‘shish kerak bo‘lishi mumkin */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .sertificate-swiper .swiper-slide-active {
-    transform: scale(1.1); /* Active slaydni biroz kattalashtirish */
-    z-index: 10; /* Active slayd oldinda bo‘lishi uchun */
-    margin-left: auto;
+    transform: scale(1.1);
+    z-index: 10;
+    margin-left: 0px !important; /* !important qo‘shish kerak bo‘lishi mumkin */
   }
 }
+

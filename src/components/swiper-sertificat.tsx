@@ -72,7 +72,7 @@ function SwiperTest() {
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                loop={false}
+                loop={true}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 coverflowEffect={{
                     rotate: 0,
