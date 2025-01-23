@@ -72,7 +72,7 @@ function SwiperTest() {
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                loop={true}
+                loop={false}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 coverflowEffect={{
                     rotate: 0,
@@ -85,14 +85,19 @@ function SwiperTest() {
                     350: {
                         width: 370,
                         slidesPerView: 1.5,
+                        centeredSlides:true
                     },
                     768: {
                         width: 768,
                         slidesPerView: 2.5,
+                        centeredSlides:true
+
                     },
                     1400: {
                         width: 1400,
-                        slidesPerView: 4,
+                        slidesPerView: 3.5,
+                        centeredSlides:true
+
                     }
                 }}
                 pagination={{ clickable: true }}
@@ -100,7 +105,7 @@ function SwiperTest() {
                 className="sertificate-swiper max-w-7xl h-[350px] xl:h-[400px] xl:px-5"
             >
                 {swiperSertificate.map((el, i) => (
-                    <SwiperSlide key={i} className="xl:-ml-[14px] w-[280px] h-[320px] z-10 mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] transition-all transform duration-300">
+                    <SwiperSlide key={i} className="w-[280px] h-[320px] z-10 mx-auto xl:w-[350px] xl:h-[400px] rounded-[20px] transition-all transform duration-300">
                         <img
                             className="w-full h-full object-contain"
                             src={el.image}

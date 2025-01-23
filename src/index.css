@@ -116,3 +116,24 @@ body::-webkit-scrollbar{
 }
 
 
+@media (max-width: 1440px) {
+  .sertificate-swiper .swiper-slide {
+    display: flex;
+    justify-content: center; /* Slaydni gorizontal markazlash */
+    align-items: center; /* Slaydni vertikal markazlash */
+    transition: transform 0.3s ease-in-out; /* Silliq harakat */
+  }
+  
+  .sertificate-swiper .swiper-slide-active {
+    transform: scale(1.1); /* Active slaydni biroz kattalashtirish */
+    z-index: 10; /* Active slayd oldinda bo‘lishi uchun */
+    margin-left: -140px !important;
+  }
+}
+@media (max-width: 768px) {
+  .sertificate-swiper .swiper-slide-active {
+    transform: scale(1.1); /* Active slaydni biroz kattalashtirish */
+    z-index: 10; /* Active slayd oldinda bo‘lishi uchun */
+    margin-left: auto;
+  }
+}
