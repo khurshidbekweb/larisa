@@ -7,6 +7,7 @@ import serviceImage1 from '@/assets/image/servicw1.jpg'
 import serviceImage2 from '@/assets/image/usliga konsultatsiya.jpg'
 import serviceImage3 from '@/assets/image/usluga diagnostika.jpg'
 import serviceImage4 from '@/assets/image/usluga lichenya.jpg'
+import serviceImage5 from '@/assets/image/larisa5.jpg'
 import modal1 from '@/assets/image/modal1.png'
 import modal2 from '@/assets/image/modal2.png'
 import modal3 from '@/assets/image/modal3.png'
@@ -147,7 +148,7 @@ const SwiperService = () => {
         },
         {
             id: 4,
-            image: serviceImage2,
+            image: serviceImage5,
             mainImage: modalmain4,
             title: t('service_card4'),
             description: t('service_des4'),

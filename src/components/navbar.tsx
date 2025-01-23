@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import logo from '../assets/image/logo.png'
 import React from 'react';
 import Menu from './menu';
+import NavSign from '@/modal/nav-sign';
 
 const Navbar = () => {
     const {t, i18n} = useTranslation()
@@ -35,7 +36,7 @@ const Navbar = () => {
                         <option className='bg-[#3679A4] text-[18px]' value="ru">Ru</option>
                     </select>
                     <Menu/>
-                    <button className='text-[#C9A690] hidden xl:block p-2 xl:w-[190px] text-center font-bold outline-none border border-[#C9A690] rounded-full xl:text-[16px]'>{t('sign')}</button>
+                    <NavSign/>
                 </div>
             </div>
         </div>

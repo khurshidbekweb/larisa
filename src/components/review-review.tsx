@@ -10,8 +10,9 @@ import star from '@/assets/image/star.png'
 import prev from '@/assets/image/prev.png'
 import next from '@/assets/image/next.png'
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SwiperCore from 'swiper'
+import { MoveRight } from "lucide-react";
 
 
 interface Testimonial {
@@ -99,6 +100,9 @@ const ReviewSwiper: React.FC = () => {
             description: t('commit_12')
         },
     ];
+    const a = 'Здравствуйте, Лариса Юрьевна! Спасибо за Вашу работу, то что на протяжении нескольких месяцев Вы постоянно были со мной на связи и помогли мне!🙏 Удачи Вам в Вашей нелегкой работе!❤️❤️❤️'
+    console.log(a.length);
+    
     return (
         <div className="py-10 relative">
             <Swiper
@@ -121,14 +125,14 @@ const ReviewSwiper: React.FC = () => {
                     },
                     1400: {
                         width: 1400,
-                        slidesPerView: 3.4,
+                        slidesPerView: 2.9,
                     }
                 }}
             >
                 {testimonials.map((slide, index) => {
                     return (<SwiperSlide key={index} className="flex justify-center items-end">
-                        <SlideItem image={slide.image} title={slide.title} desc={slide.description}/>
-                    </SwiperSlide>)
+                                <SlideItem image={slide.image} title={slide.title} desc={slide.description}/>
+                            </SwiperSlide>)
                 })}
             </Swiper>
             <div className="flex justify-between items-center w-[280px] md:w-[300px] absolute bottom-0 md:bottom-8 z-20 left-1/2 transform -translate-x-1/2">
@@ -150,9 +154,10 @@ interface SlideItemProps {
 
 // Har bir slayd elementi
 const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
-
+const {t} = useTranslation()
+const [showText, setShowText] = useState(false)
     return (
-        <div className="w-[270px] bg-white p-6 h-[300px] md:w-[399px] md:h-[362px] relative rounded-[40px] overflow-hidden">
+        <div className="w-[270px] bg-white p-6 md:w-[399px]  relative rounded-[40px] overflow-hidden">
             <div className="flex items-center gap-3">
                 <img
                     src={image}
@@ -165,8 +170,9 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
                 </div>
             </div>
             <div className="mt-4">
-                <h2 className="text-lg text-[12px] line-clamp-5 md:line-clamp-6 md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]">{desc}</h2>
-                <button className="p-2 px-8 absolute bottom-2 md:bottom-8 bg-[#D7EAF0] text-[14px] rounded-full">Диабет</button>
+                <p  className={`text-lg text-[12px] ${showText ? 'line-clamp-none': "line-clamp-5 md:line-clamp-6"}  md:text-[16px] xl:text-[18px] text-start text-[#A6A6A6]`}>{desc}</p>
+                <button className={`${desc.length>187 || showText ?'block mt-10':'hidden'} text-[#C9A690] pb-2 text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`} onClick={() => setShowText(true)}>{t('open_service')} <MoveRight /></button>
+                <button className={`${desc.length>187?'':'mt-10'} p-2 px-8 bg-[#D7EAF0] text-[14px] rounded-full`}>{t('review_add')}</button>
             </div>
         </div>
     );

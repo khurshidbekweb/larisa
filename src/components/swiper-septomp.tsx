@@ -24,7 +24,6 @@ const SwiperCarousel = () => {
   return (
     <div className="relative max-w-7xl mx-auto my-10 px-2">
       <Swiper
-        spaceBetween={1}
         pagination={{ clickable: true }}
         modules={[Keyboard, Pagination]}
         keyboard={{ enabled: true }}
@@ -35,14 +34,17 @@ const SwiperCarousel = () => {
           370: {
             width: 370,
             slidesPerView: 1.4,
+            spaceBetween: 10
           },
           768: {
             width: 768,
             slidesPerView: 2.5,
+            spaceBetween:5
           },
           1400: {
             width: 1400,
-            slidesPerView: 4,
+            slidesPerView: 4.9,
+            spaceBetween:15
           },
         }}
         className="relative h-[350px] md:h-[420px]"
@@ -83,7 +85,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, isActive }) => {
       className={classNames(
         "absolute top-1/2 transform -translate-y-1/2 transition-all duration-300 ease-in-out overflow-hidden rounded-[20px] shadow-lg",
     {
-      "left-0 w-[300px] md:w-[370px] xl:w-[400px] h-[80%] !md:h-[350px] z-30": isActive,
+      "left-0 w-[300px] md:w-[370px] xl:w-[350px] h-[80%] !md:h-[350px] z-30 cursor-pointer": isActive,
       "left-[40px] md:left-[80px] xl:left-[70px] w-[200px] md:w-[270px] h-[80%] z-10 opacity-75": !isActive,
     }
   )}

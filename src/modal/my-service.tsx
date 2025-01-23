@@ -40,11 +40,11 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                         className="w-full h-[300px] md:h-[354px] xl:h-[399px] object-cover"
                     />
                     <div className="absolute flex flex-col justify-end top-[175px] md:top-[165px] xl:top-[218px] w-full px-7 py-4 text-start h-[104px] bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">
-                        <h3 className="bg-card-service text-lg text-[20px] md:text-[30px] font-semibold ">{title}</h3>
+                        <h3 className="bg-card-service text-lg text-[20px] md:text-[30px] font-semibold z-10">{title}</h3>
                     </div>
-                    <div className="absolute  service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-2 pb-3 px-7 bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">                            
-                        <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[18px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
-                        <p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3">{t('open_service')} <MoveRight /></p>
+                    <div className="absolute  service-bg bottom-0 w-full bg-[#FAE1DF] flex flex-col items-start space-y-1 pb-3 px-7 bg-gradient-to-t from-[#FAE1DF] via-[#FAE1DF]/50 to-transparent">                            
+                        <h2 className="text-lg text-[14px] md:text-[16px] xl:text-[17px] line-clamp-2 text-start text-[#A6A6A6]">{desc}</h2>
+                        <p className="text-[#C9A690] pb-2 text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3">{t('open_service')} <MoveRight /></p>
                     </div>
                 </div>
             </DialogTrigger>
