@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Pagination } from "swiper/modules";
@@ -5,7 +6,9 @@ import SwiperCore from "swiper";
 import classNames from "classnames";
 import prev from "@/assets/image/prev.png";
 import next from "@/assets/image/next.png";
+// @ts-expect-error
 import "swiper/css";
+// @ts-expect-error
 import "swiper/css/pagination";
 import { SliderData } from '@/constants/semtoms';
 import { SlideItemProps } from '@/lib/types/slider';
