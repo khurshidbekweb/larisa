@@ -247,10 +247,10 @@ const SwiperService = () => {
                         slidesPerView: 3.4,
                     }
                 }}
-                className="mySwiper h-[420px] md:h-[440px] xl:h-[500px]"
+                className="mySwiper h-[480px] md:h-[440px] xl:h-[500px]"
                 >
                 {slides.map((slide) => (
-                    <SwiperSlide key={slide.id}>
+                    <SwiperSlide key={slide.id} className="mt-0">
                         <SlideItem image={slide.image} mainImage={slide.mainImage} title={slide.title} desc={slide.description} modalInfo={slide.modalInfo} summa={slide.summa}/>
                     </SwiperSlide>
                 ))}

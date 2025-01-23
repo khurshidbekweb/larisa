@@ -10,6 +10,7 @@ import {
 } from "./ui/sheet";
 import logo from '@/assets/image/logo.png'
 import { useTranslation } from "react-i18next";
+import MenuSign from "@/modal/menu-sign";
 
 const Menu = () => {
     const {t} = useTranslation()
@@ -34,9 +35,7 @@ const Menu = () => {
                         <SheetClose>
                             <a className="text-[20px] md:text-[32px] font-semibold text-black" href="#">{t('nav_four')}</a>
                         </SheetClose>
-                        <SheetClose>
-                            <button className='text-[#C9A690] p-2 w-[190px] text-center font-bold outline-none border border-[#C9A690] rounded-full xl:text-[16px]'>{t('sign')}</button>
-                        </SheetClose>
+                        <MenuSign/>
                     </SheetDescription>
                 </SheetHeader>
             </SheetContent>

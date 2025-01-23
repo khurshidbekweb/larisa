@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import arrow from '@/assets/image/arrow.png'
 import shadow from '@/assets/image/Vector.png'
 import { useState } from "react";
+import ServiceSign from "./service-sign";
 interface modalINfo{
     description:string,
     image:string,
@@ -92,7 +93,7 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                                 <div className="relative w-full mt-2 md:mt-8 md:p-3">
                                     <p className="text-start text-[13px] md:text-[18px] w-full xl:text-[20px] md:w-[88%]">{t('modal_u')}</p>
                                     <img className="ml-10 md:ml-80" src={arrow} alt="arrow" />
-                                    <button className="absolute text-[#C9A690] p-2 px-7 bottom-10 md:bottom-14 md:right-14 xl:right-20 font-bold outline-none border border-[#C9A690] rounded-full">{t('sign')}</button>
+                                    <ServiceSign/>
                                 </div>
                             </div>
                                 

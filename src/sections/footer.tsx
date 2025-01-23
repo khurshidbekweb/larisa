@@ -55,8 +55,8 @@ const Footer = () => {
             </div>
             <hr />
             <div className="max-w-7xl mx-auto flex justify-between items-center text-white xl:py-[35px] p-4">
-                <h4 className='text-[12px] md:text-[15px] xl:text-[16px] w-[150px] md:w-[80%]'>2024 © Ким Лариса Юрьевна. Все права защищены</h4>
-                <p className='text-[12px] md:text-[15px] xl:text-[16px]'>Result agency</p>
+                <h4 className='text-[12px] md:text-[15px] xl:text-[16px] w-[150px] md:w-[80%]'>{t('footer_botton')}</h4>
+                <a href='https://result-me.uz/uz' className='text-[12px] md:text-[15px] xl:text-[16px]'>Result agency</a>
             </div>
         </footer>
     );
