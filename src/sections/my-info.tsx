@@ -13,7 +13,7 @@ import uzMobile from '@/assets/image/my_mobile_uz.png'
 const MyInfo = () => {
     const {t, i18n} = useTranslation()
   return (
-    <div className="max-w-7xl mx-auto container mt-10 md:mt-14 xl:mt-20">
+    <section id="my-info" className="max-w-7xl mx-auto container mt-10 md:mt-14 xl:mt-20">
         <div className="my-info-inner px-2">
             <h4 className="text-[#C9A690] font-bold text-[14px] md:text-[16px] text-center">{t('my_info_t')}</h4>
             <h2 className="text-[24px] font-semibold md:text-[32px] xl:text-[40px] text-center mt-3 md:mt-5 px-4">{t('my_info_d')}</h2>
@@ -41,7 +41,7 @@ const MyInfo = () => {
                 </li>
             </ul> */}
         </div>
-    </div>
+    </section>
   );
 };
 

@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 
 const SignUp = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const [open, setOpen] = useState(false)
     const addOrder = useMutation({
         mutationFn: orderPost.postOrder,
@@ -46,7 +46,7 @@ const SignUp = () => {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className=''>
                 <p className="text-white text-[20px] md:text-[24px] xl:text-[20px] font-bold">{t('sign')}</p>
-                <MoveRight className="text-white ml-10 md:ml-16 xl:ml-12" />
+                <MoveRight size={35} className={`text-white md:ml-24 xl:ml-12 ${i18n.language=='uz'?'hidden md:block':''}`} />
             </DialogTrigger>
             <DialogContent className='xl:max-w-[680px] sm:max-w-[687px]'>
                 <DialogHeader>

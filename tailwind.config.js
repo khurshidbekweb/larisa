@@ -7,6 +7,9 @@ export default {
 	],
 	theme: {
     	extend: {
+			textAlign: {
+				justify: 'justify',
+			  },
     		animation: {
 				marquee: 'marquee 20s linear infinite',
 				'accordion-down': 'accordion-down 0.1s ease-out',

@@ -5,6 +5,15 @@ import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
     const {t} = useTranslation()
+    const handleScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+            });
+        }
+    }
     return (
         <footer className="bg-[#1A5C7F]"> 
             <div className="footer-inner max-w-7xl xl:py-20 md:py-10 py-5 p-4 mx-auto flex flex-col xl:flex-row xl:justify-between xl:items-start">
@@ -26,21 +35,21 @@ const Footer = () => {
                 <ul className="text-white mt-8 flex flex-col md:flex-row space-y-4 md:space-y-0 md:justify-between xl:flex-1 xl:mt-0">
                     <li className='flex flex-col items-start'>
                         <h2 className='text-[20px] md:text-[20px] xl:text-[24px] font-bold'>{t('services')}</h2>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="#">{t('service_card1')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('footer_deagnostik')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('modal_4_t')}</a>
+                        <li onClick={() => handleScroll('faq')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-3 cursor-pointer'>{t('faq_t')}</li>
+                        <li onClick={() => handleScroll('semptom')}  className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('footer_deagnostik')}</li>
+                        <li onClick={() => handleScroll('services')}  className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('services')}</li>
                     </li>
                     <li className='flex flex-col items-start'>
                         <h2 className='text-[20px] md:text-[20px] xl:text-[24px] font-bold'>{t('nav_one')}</h2>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="#">{t('nav_one')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('nav_four')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('reviews_t')}</a>
+                        <a onClick={()=> handleScroll('home')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="#">{t('nav_one')}</a>
+                        <li onClick={() => handleScroll('contact')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('nav_four')}</li>
+                        <li onClick={() => handleScroll('review')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('reviews_t')}</li>
                     </li>
                     <li className='flex flex-col items-start'>
                         <h2 className='text-[20px] md:text-[20px] xl:text-[24px] font-bold'>{t('Контакты')}</h2>
                         <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="tel:+998909418549">+(998) 90 941 85 49</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('footer_org')}</a>
-                        <a className='text-[14px] md:text-[16px] xl:text-[18px] mt-2' href="#">{t('constact_2_d')}</a>
+                        <li className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('footer_org')}</li>
+                        <li className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('constact_2_d')}</li>
                     </li>
                 </ul>
             </div>

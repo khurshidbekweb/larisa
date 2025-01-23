@@ -10,6 +10,7 @@ import { MoveRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import arrow from '@/assets/image/arrow.png'
 import shadow from '@/assets/image/Vector.png'
+import { useState } from "react";
 interface modalINfo{
     description:string,
     image:string,
@@ -27,6 +28,8 @@ interface propsService{
 
 const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsService) => {
     const {t} = useTranslation()
+    const [show, setShow] = useState(2)
+    const [showDesk, setShowDesk] = useState(4)
     return (
         <Dialog>
             <DialogTrigger className="outline-none  w-full h-full">
@@ -58,8 +61,8 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                         <div className="mt-5 xl:flex xl:flex-row-reverse">
                             <img className="w-[90%] mx-auto h-[180px] md:h-[300px] md:w-[430px]" src={mainImage} alt="modal info image" />
                             <div className="">
-                                <ul className="mt-7 flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
-                                    {modalInfo.map((el, i) => (
+                                <ul className="mt-7 hidden md:flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
+                                    {modalInfo.slice(0,showDesk).map((el, i) => (
                                         <li key={i+1} className="flex items-start gap-x-4 md:w-[304px]">
                                             <img className="w-14 h-14" src={el.image} alt="modal icon info" />
                                             <div className="text-start text-black">
@@ -68,6 +71,22 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                                             </div>
                                         </li>
                                     ))}
+                                <li className="flex flex-col items-start">
+                                    <li onClick={() => setShowDesk(modalInfo.length)} className={`${modalInfo.length==showDesk?'hidden':'block'} text-[#C9A690] cursor-pointer text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`}>{t('service_more_info')}  <MoveRight /></li>
+                                    <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa} {t('sum')}</p></li>
+                                </li>
+                                </ul>
+                                <ul className="mt-7 md:hidden flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
+                                    {modalInfo.slice(0, show).map((el, i) => (
+                                        <li key={i+1} className="flex items-start gap-x-4 md:w-[304px]">
+                                            <img className="w-14 h-14" src={el.image} alt="modal icon info" />
+                                            <div className="text-start text-black">
+                                                <h3 className=" text-[14px] xl:text-[18px] font-semibold">{el.title}</h3>
+                                                <p className="mt-1 text-[11px] md:text-[13px] xl:text-[16px] font-medium leading-4">{el.description}</p>
+                                            </div>
+                                        </li>
+                                    ))}
+                                <li  onClick={() => setShow(modalInfo.length)} className={`${modalInfo.length ===show?"hidden":"block"} text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`}>{t('service_more_info')}  <MoveRight /></li>
                                 <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa} {t('sum')}</p></li>
                                 </ul>
                                 <div className="relative w-full mt-2 md:mt-8 md:p-3">

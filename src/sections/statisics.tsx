@@ -2,6 +2,9 @@ import { useTranslation } from "react-i18next";
 
 const Statisics = () => {
     const {t} = useTranslation()
+    const lines = t('statisics_info').split("\n");
+    console.log(lines);
+    
     const statisicsInfo = [
         {
             num: 12,
@@ -21,7 +24,11 @@ const Statisics = () => {
             <div className="statisics-inner flex flex-col xl:flex-row xl:items-start xl:gap-10">
                 <div className="flex justify-between items-start gap-x-6 md:gap-x-10 w-full xl:w-[45%]">
                     <h3 className="w-[70px] md:w-20 text-[#C9A690] text-[14px] md:text-[16px] font-montserrat font-bold">{t('statisics_me')}</h3>
-                    <p className="flex-1 text-[#A6A6A6] text-[14px] md:text-[18px] xl:text-[19px] text-justify font-medium leading-5">{t('statisics_info')}</p>
+                    <p className="flex-1 text-[#A6A6A6] text-[14px] md:text-[18px] xl:text-[19px] xl:text-justify font-medium leading-5">
+                    {lines.map((line, index) => (
+                        <p key={index}>{line}</p> 
+                    ))}
+                    </p>
                 </div>
                 <ul className="flex flex-col w-full xl:w-[50%] space-y-8 xl:space-y-0 md:flex-row justify-between items-center text-center mt-10 xl:mt-0">
                     {statisicsInfo.map((el, i) => (
