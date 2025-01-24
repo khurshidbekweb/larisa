@@ -242,6 +242,10 @@ const SwiperService = () => {
                         width: 768,
                         slidesPerView: 2.2,
                     },
+                    1280: {
+                        width: 1280,
+                        slidesPerView: 3.2,
+                    },
                     1400: {
                         width: 1400,
                         slidesPerView: 3.4,
