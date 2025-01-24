@@ -123,6 +123,14 @@ const ReviewSwiper: React.FC = () => {
                         width: 768,
                         slidesPerView: 1.9,
                     },
+                    1024: {
+                        width: 1024,
+                        slidesPerView: 2.8,
+                    },
+                    1280: {
+                        width: 1280,
+                        slidesPerView: 2.8,
+                    },
                     1400: {
                         width: 1400,
                         slidesPerView: 2.9,
@@ -157,7 +165,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
 const {t} = useTranslation()
 const [showText, setShowText] = useState(false)
     return (
-        <div className="w-[320px] bg-white p-6 md:w-[399px]  relative rounded-[40px] overflow-hidden">
+        <div className="w-[320px] bg-white p-6 md:w-[399px] md:h-[320px] xl:h-[370px]  relative rounded-[40px] overflow-hidden">
             <div className="flex items-center gap-3">
                 <img
                     src={image}

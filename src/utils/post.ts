@@ -8,7 +8,7 @@ interface postOrder{
 }
 export const orderPost = {
     postOrder: async ({firstName, lastName, phone, service}:postOrder) => {
-        const {data} = await axios.post('http://172.16.176.160:8086/api/client', {
+        const {data} = await axios.post('https://api.dr-larisa.uz.dr-larisa.uz/api/client', {
             firstName, lastName, phone, service
         }, {
             headers: {
@@ -18,7 +18,7 @@ export const orderPost = {
         return data
     },
     countControl: async (name:string) => {
-        const {data} = await axios.post('http://172.16.176.160:8086/api/count/add-count', {
+        const {data} = await axios.post('https://api.dr-larisa.uz.dr-larisa.uz/api/count/add-count', {
                 name
         }, {
             headers: {
