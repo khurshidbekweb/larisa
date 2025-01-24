@@ -9,10 +9,10 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
                 <div className="flex items-center relative gap-x-10 pt-7 md:mt-12">
                     <h5 className="text-[14px] md:text-[16px] text-[#C9A690] xl:mt-10 font-montserrat font-bold uppercase">{t('hero_doc')}</h5>
-                    <h2 className="text-[32px] md:text-[48px] xl:text-[48px] font-montserrat xl:mt-10 z-10 text-start leading-9 font-semibold">
+                    <h2 className="text-[27px] md:text-[48px] xl:text-[48px] font-montserrat xl:mt-10 z-10 text-start leading-9 font-semibold">
                         {t('hero_doc_larina')}
                     </h2>
-                    <span className="absolute text-[50px] text-[#14274E1A] leading-[55px] md:leading-[65px] md:text-[65px] xl:text-[108px] md:p-4 xl:p-0 xl:leading-[250px] font-montserrat font-medium xl:text-justify max-full xl:whitespace-pre-wrap">{t('hero_doc_fullname')}</span>
+                    <span className="absolute z-20 text-[42px] text-[#14274E1A] leading-[55px] md:leading-[65px] md:text-[70px] xl:text-[108px] md:p-4 xl:p-0 xl:leading-[250px] font-montserrat font-medium xl:text-justify max-full xl:whitespace-pre-wrap">{t('hero_doc_fullname')}</span>
                 </div>
 
                 <div className="flex justify-between items-start md:items-end mt-14 md:mt-28 xl:mt-24">

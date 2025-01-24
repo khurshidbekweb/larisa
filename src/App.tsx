@@ -16,7 +16,9 @@ import Services from "./sections/services";
 import Statisics from "./sections/statisics";
 
 const App = () => {
-  
+  if(!localStorage.getItem('language')){
+    localStorage.setItem('language', 'ru')
+  }
   return (
     <>
       <Navbar/>
