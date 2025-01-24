@@ -14,6 +14,15 @@ import MenuSign from "@/modal/menu-sign";
 
 const Menu = () => {
     const {t} = useTranslation()
+    const handleScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }
     return (
         <Sheet>
             <SheetTrigger className="text-white xl:hidden"><MenuIcon/></SheetTrigger>
@@ -24,16 +33,21 @@ const Menu = () => {
                     </SheetTitle>
                     <SheetDescription className="w-full flex flex-col space-y-5 items-center justify-center">
                         <SheetClose>
-                            <a className="text-[20px] md:text-[32px] font-semibold mt-10 text-black" href="#">{t('nav_one')}</a>
+                            <button onClick={()=>handleScroll('home')} className="text-[20px] md:text-[32px] font-semibold mt-10 text-black">{t('nav_one')}</button>
+                        </SheetClose>                        
+                            <p onClick={() => handleScroll('services')}  className="text-[20px] md:text-[32px] font-semibold text-black">
+                                <SheetClose>
+                                    {t('nav_two')}
+                                </SheetClose>
+                            </p>
+                        <SheetClose>
+                            <button onClick={(e) => {
+            e.preventDefault(); // Default harakatni bloklash
+            handleScroll('review'); // Scrollingni amalga oshirish
+        }}  className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_three')}</button>
                         </SheetClose>
                         <SheetClose>
-                            <a className="text-[20px] md:text-[32px] font-semibold text-black" href="#">{t('nav_two')}</a>
-                        </SheetClose>
-                        <SheetClose>
-                            <a className="text-[20px] md:text-[32px] font-semibold text-black" href="#">{t('nav_three')}</a>
-                        </SheetClose>
-                        <SheetClose>
-                            <a className="text-[20px] md:text-[32px] font-semibold text-black" href="#">{t('nav_four')}</a>
+                            <button onClick={() => handleScroll('contact')} className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_four')}</button>
                         </SheetClose>
                         <MenuSign/>
                     </SheetDescription>

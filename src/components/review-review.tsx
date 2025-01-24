@@ -116,8 +116,8 @@ const ReviewSwiper: React.FC = () => {
                 className="max-w-7xl mx-auto test-swiper h-[500px]"
                 breakpoints={{
                     350: {
-                        width: 370,
-                        slidesPerView: 1.2,
+                        width: 350,
+                        slidesPerView: 1,
                     },
                     768: {
                         width: 768,
@@ -157,7 +157,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, desc }) => {
 const {t} = useTranslation()
 const [showText, setShowText] = useState(false)
     return (
-        <div className="w-[270px] bg-white p-6 md:w-[399px]  relative rounded-[40px] overflow-hidden">
+        <div className="w-[320px] bg-white p-6 md:w-[399px]  relative rounded-[40px] overflow-hidden">
             <div className="flex items-center gap-3">
                 <img
                     src={image}

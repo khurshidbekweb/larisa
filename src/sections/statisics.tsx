@@ -30,7 +30,7 @@ const Statisics = () => {
                     ))}
                     </p>
                 </div>
-                <ul className="flex flex-col w-full xl:w-[50%] space-y-8 xl:space-y-0 md:flex-row justify-between items-center text-center mt-10 xl:mt-0">
+                <ul className="flex flex-col w-full xl:w-[50%] space-y-8  md:space-y-0 md:flex-row justify-between items-center text-center mt-10 xl:mt-0">
                     {statisicsInfo.map((el, i) => (
                         <li key={i+1} className="flex flex-col space-y-3">
                             <h2 className="text-[#1A5C7F] text-[40px] md:text-[] xl:text-[64px] xl:font-bold font-mono font-semibold leading-10 flex justify-center gap-1">{el.num} <p className="text-[35px] md:text-[42px]">+</p></h2>

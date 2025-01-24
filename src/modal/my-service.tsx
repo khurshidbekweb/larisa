@@ -60,7 +60,7 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                     </DialogTitle>
                     <DialogDescription className="xl:max-w-[90%] mx-auto">
                         <div className="mt-5 xl:flex xl:flex-row-reverse">
-                            <img className="w-[90%] mx-auto h-[180px] md:h-[300px] md:w-[430px]" src={mainImage} alt="modal info image" />
+                            <img className="w-[308px] mx-auto h-[270px] md:w-[450px] md:h-[350px] xl:h-[300px] xl:w-[430px]" src={mainImage} alt="modal info image" />
                             <div className="">
                                 <ul className="mt-7 hidden md:flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
                                     {modalInfo.slice(0,showDesk).map((el, i) => (

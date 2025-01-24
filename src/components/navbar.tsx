@@ -21,7 +21,7 @@ const Navbar = () => {
         }
     }
     return (
-        <div className="w-full bg-[#3679A4]">
+        <div id='home' className="w-full bg-[#3679A4]">
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-2 md:py-3 px-2 xl:px-0">
                 <a href="/"><img className="logo text-white w-[125px] md:w-[187px]" src={logo} alt="logo-image" /></a>
                 <nav className='items-center text-white gap-x-7 text-[16px] font-normal hidden xl:flex'>
