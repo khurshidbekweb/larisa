@@ -14,14 +14,17 @@ import MenuSign from "@/modal/menu-sign";
 
 const Menu = () => {
     const {t} = useTranslation()
-    const handleScroll = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            });
-        }
+    const handleScroll = (id: string, close: () => void) => {
+        close(); // Modalni yopish
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
+        }, 300);
     }
     return (
         <Sheet>
@@ -33,21 +36,18 @@ const Menu = () => {
                     </SheetTitle>
                     <SheetDescription className="w-full flex flex-col space-y-5 items-center justify-center">
                         <SheetClose>
-                            <button onClick={()=>handleScroll('home')} className="text-[20px] md:text-[32px] font-semibold mt-10 text-black">{t('nav_one')}</button>
+                            <button onClick={()=>handleScroll('home', () => document.body.click())} className="text-[20px] md:text-[32px] font-semibold mt-4 text-black">{t('nav_one')}</button>
                         </SheetClose>                        
-                            <p onClick={() => handleScroll('services')}  className="text-[20px] md:text-[32px] font-semibold text-black">
-                                <SheetClose>
-                                    {t('nav_two')}
-                                </SheetClose>
-                            </p>
                         <SheetClose>
-                            <button onClick={(e) => {
-            e.preventDefault(); // Default harakatni bloklash
-            handleScroll('review'); // Scrollingni amalga oshirish
-        }}  className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_three')}</button>
+                                <button onClick={() => handleScroll('services', () => document.body.click())}  className="text-[20px] md:text-[32px] font-semibold text-black">
+                                        {t('nav_two')}
+                                </button>
+                        </SheetClose>
+                        <SheetClose asChild>
+                            <button onClick={() => handleScroll('review', () => document.body.click()) }  className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_three')}</button>
                         </SheetClose>
                         <SheetClose>
-                            <button onClick={() => handleScroll('contact')} className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_four')}</button>
+                            <button onClick={() => handleScroll('contact', () => document.body.click())} className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_four')}</button>
                         </SheetClose>
                         <MenuSign/>
                     </SheetDescription>
