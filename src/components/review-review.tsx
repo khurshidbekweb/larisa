@@ -115,25 +115,26 @@ const ReviewSwiper: React.FC = () => {
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 className="max-w-7xl mx-auto test-swiper h-[500px]"
                 breakpoints={{
-                    350: {
-                        width: 350,
-                        slidesPerView: 1,
+                    390: {
+                        slidesPerView: 1.2,
+                    },
+                    540: {
+                        slidesPerView: 1.5,
                     },
                     768: {
-                        width: 768,
-                        slidesPerView: 1.9,
+                        slidesPerView: 1.7,
+                    },
+                    912: {
+                        slidesPerView: 2.2,
                     },
                     1024: {
-                        width: 1024,
-                        slidesPerView: 2.8,
+                        slidesPerView: 2.5,
                     },
                     1280: {
-                        width: 1280,
-                        slidesPerView: 2.8,
+                        slidesPerView: 3,
                     },
                     1400: {
-                        width: 1400,
-                        slidesPerView: 2.9,
+                        slidesPerView: 3,
                     }
                 }}
             >

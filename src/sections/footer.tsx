@@ -18,7 +18,7 @@ const Footer = () => {
         <footer className="bg-[#1A5C7F]"> 
             <div className="footer-inner max-w-7xl xl:py-20 md:py-10 py-5 p-4 mx-auto flex flex-col xl:flex-row xl:justify-between xl:items-start">
                 <div className="flex flex-col md:flex-row md:justify-between xl:flex-col xl:items-start xl:w-[30%]">
-                    <img className='w-[187px]' src={logo} alt="footer logo" />
+                    <img onClick={() => handleScroll('home')} className='w-[187px]' src={logo} alt="footer logo" />
                     <ul className="flex items-center gap-x-3 mt-5">
                         <li className="border p-2 rounded-full">
                             <a href="https://t.me/endokimlarisa" target='_blank'>

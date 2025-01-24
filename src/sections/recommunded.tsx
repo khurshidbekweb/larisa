@@ -54,7 +54,7 @@ const Recommunded = () => {
                 <div className="bg-[#89BFDB1A] mx-auto py-3 md:py-0 md:mt-32 xl:mt-20">
                     <div className="flex max-w-7xl mx-auto flex-col xl:flex-row space-y-4 md:space-y-6 xl:space-y-0 justify-between items-center mt-5 md:mt-8 xl:mt-10">
                         <img className="xl:w-[550px] px-4 md:-mt-16 xl:-mt-5" src={Image} alt="" />
-                        <ul className="flex flex-col md:space-y-0 w-full md:flex-row md:gap-5 md:flex-wrap space-y-3 px-4 md:p-4 xl:py-8 xl:p-6">
+                        <ul className="flex flex-col md:space-y-0 w-full md:flex-row md:items-center md:justify-center md:gap-5 md:flex-wrap space-y-3 px-4 md:p-4 xl:py-8 xl:p-6">
                             {diateInfo.map((el, i) => (
                                 <li key={i} className="flex items-center gap-x-3 w-[328px] md:w-[322px] xl:w-[320px]">
                                     <img src={el.image} alt="image" />

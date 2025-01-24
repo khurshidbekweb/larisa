@@ -83,21 +83,14 @@ function SwiperTest() {
                 }}
                 breakpoints={{
                     350: {
-                        width: 370,
-                        slidesPerView: 1.5,
-                        centeredSlides:true
+                        slidesPerView: 1.2,
                     },
-                    768: {
-                        width: 768,
-                        slidesPerView: 2.5,
-                        centeredSlides:true
-
+                    768: {                    
+                        slidesPerView: 2.5,  
                     },
                     1400: {
-                        width: 1400,
+                        
                         slidesPerView: 3.5,
-                        centeredSlides:true
-
                     }
                 }}
                 pagination={{ clickable: true }}

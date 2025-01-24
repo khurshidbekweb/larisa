@@ -34,7 +34,7 @@ const Advantage = () => {
                 <div className="max-w-7xl mx-auto xl:my-20 mt-20 md:mt-32 flex flex-col xl:flex-row-reverse space-y-4 md:space-y-6 xl:space-y-0 justify-between items-center">
                     <img className="xl:w-[519px] absolute px-4 -mt-10 md:-mt-20" src={advantage} alt="advantage image" />
                     <span className="block xl:w-[519px] h-[250px] md:h-[320px]"></span>
-                    <ul className="flex xl:flex-1 flex-col text-start md:space-y-0 w-full md:flex-row md:gap-5 py-2 md:flex-wrap space-y-3 px-4 md:p-4 xl:py-8 xl:p-6">
+                    <ul className="flex xl:flex-1 flex-col text-start md:space-y-0 w-full md:grid md:grid-cols-2 md:justify-items-center md:gap-5 py-2 space-y-3 px-4 md:p-4 xl:py-8 xl:p-6">
                         {diateInfo.map((el, i) => (
                             <li key={i} className="flex items-center gap-x-3 max-w-[328px] md:max-w-[322px] xl:max-w-[320px]">
                                 <img src={el.image} alt="image" />
