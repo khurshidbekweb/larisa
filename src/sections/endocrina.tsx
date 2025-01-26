@@ -20,8 +20,8 @@ const Endocrina = () => {
                             <img className="hidden md:block relative left-1/4 md:-top-28 xl:relative xl:left-0 xl:top-0" src={desktop_uz} alt="mobile" />
                         </>
                         :<>
-                            <img className="block md:hidden relative -top-24" src={mobile} alt="mobile" />
-                            <img className="hidden md:block relative  md:top-36 xl:relative xl:left-0 xl:top-0" src={desktop} alt="mobile" />
+                            <img className="block md:hidden relative mx-auto -top-24" src={mobile} alt="mobile" />
+                            <img className="hidden md:block relative left-1/4 md:-top-28 xl:relative xl:left-0 xl:top-0" src={desktop} alt="mobile" />
                         </>}
                         <ul className="-mt-16 md:-mt-28 flex flex-col md:flex-row md:flex-wrap md:justify-between space-y-3 md:space-y-0 md:gap-5 pb-5 px-4 xl:w-[55%] xl:mt-[0px] xl:py-0 xl:px-4">
                             <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">

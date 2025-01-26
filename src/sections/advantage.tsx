@@ -32,7 +32,7 @@ const Advantage = () => {
             <h2 className="text-[24px] font-semibold md:text-[32px] xl:text-[40px] text-center mt-3 md:mt-5 px-4">{t('advantage_d')}</h2>
             <div className=" bg-[#E4C3AD1A]">
                 <div className="max-w-7xl mx-auto xl:my-20 mt-20 md:mt-32 flex flex-col xl:flex-row-reverse space-y-4 md:space-y-6 xl:space-y-0 justify-between items-center">
-                    <img className="xl:w-[519px] absolute px-4 -mt-10 md:-mt-20" src={advantage} alt="advantage image" />
+                    <img className="md:w-[519px] w-[450px]  absolute px-4 -mt-10 md:-mt-20" src={advantage} alt="advantage image" />
                     <span className="block xl:w-[519px] h-[250px] md:h-[320px]"></span>
                     <ul className="flex xl:flex-1 flex-col text-start md:space-y-0 w-full md:grid md:grid-cols-2 md:justify-items-center md:gap-5 py-2 space-y-3 px-4 md:p-4 xl:py-8 xl:p-6">
                         {diateInfo.map((el, i) => (
