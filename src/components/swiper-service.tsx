@@ -52,7 +52,7 @@ const SwiperService = () => {
             mainImage: modalmain1,
             title: t('service_card1'),
             description: t('service_des1'),
-            summa: '400 000',
+            summa: t('sum_3'),
             modalInfo: [
                 {
                     image: modal1,
@@ -92,7 +92,7 @@ const SwiperService = () => {
             mainImage: modalmain2,
             title: t('service_card2'),
             description: t('service_des2'),
-            summa: '420 000',
+            summa: t('sum_4'),
             modalInfo: [
                 {
                     image: modal2_1,
@@ -197,7 +197,7 @@ const SwiperService = () => {
             mainImage: modalmain5,
             title: t('service_card5'),
             description: t('service_des5'),
-            summa: '1 000 000',
+            summa: t('sum_5'),
             modalInfo: [
                 {
                     image: modal5_1,

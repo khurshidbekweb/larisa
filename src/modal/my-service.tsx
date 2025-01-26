@@ -74,7 +74,7 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                                     ))}
                                 <li className="flex flex-col items-start">
                                     <li onClick={() => setShowDesk(modalInfo.length)} className={`${modalInfo.length==showDesk?'hidden':'block'} text-[#C9A690] cursor-pointer text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`}>{t('service_more_info')}  <MoveRight /></li>
-                                    <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa} {t('sum')}</p></li>
+                                    <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa}</p></li>
                                 </li>
                                 </ul>
                                 <ul className="mt-7 md:hidden flex flex-col space-y-2 md:flex-row md:flex-wrap md:gap-3">
@@ -87,10 +87,10 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                                             </div>
                                         </li>
                                     ))}
-                                <li  onClick={() => setShow(modalInfo.length)} className={`${modalInfo.length ===show?"hidden":"block"} text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`}>{t('service_more_info')}  <MoveRight /></li>
-                                <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa} {t('sum')}</p></li>
+                                <li  onClick={() => setShow(modalInfo.length)} className={`${modalInfo.length == show ? "hidden":"block"} text-[#C9A690] z-20 cursor-pointer text-[14px] md:text-[16px] xl:text-[18px] flex items-center gap-3`}>{t('service_more_info')}  <MoveRight /></li>
+                                <li className="mt-1 text-[12px] md:text-[14px] xl:text-[16px] font-semibold leading-4 flex gap-x-2">{t('modal_sum')} <p className="font-medium">{summa}</p></li>
                                 </ul>
-                                <div className="relative w-full mt-2 md:mt-8 md:p-3">
+                                <div className={` ${show > 2 ?'block':'hidden md:block'} relative w-full mt-2 md:mt-8 md:p-3`}>
                                     <p className="text-start text-[13px] md:text-[18px] w-full xl:text-[20px] md:w-[88%]">{t('modal_u')}</p>
                                     <img className="ml-10 md:ml-80" src={arrow} alt="arrow" />
                                     <ServiceSign/>

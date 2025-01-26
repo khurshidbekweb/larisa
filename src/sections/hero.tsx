@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto relative text-center container px-4 h-[470px] md:h-[577px] xl:h-[620px] overflow-hidden">
                 <div className="flex items-center relative gap-x-10 pt-7 md:mt-12">
                     <h5 className="text-[14px] md:text-[16px] text-[#C9A690] xl:mt-10 font-montserrat font-bold uppercase">{t('hero_doc')}</h5>
-                    <h2 className="text-[33px] md:text-[48px] xl:text-[48px] font-montserrat xl:mt-10 z-10 text-start leading-9 font-semibold">
+                    <h2 className="text-[35px] md:text-[48px] xl:text-[48px] font-montserrat xl:mt-10 z-10 text-start leading-9 font-semibold">
                         {t('hero_doc_larina')}
                     </h2>
                     <span className="absolute z-20 text-[50px] text-[#14274E1A] leading-[55px] md:leading-[75px] md:text-[75px] md:-top-8 xl:text-[108px] md:p-4 xl:p-0 xl:leading-[250px] font-montserrat font-medium xl:text-justify max-full xl:whitespace-pre-wrap">{t('hero_doc_fullname')}</span>
