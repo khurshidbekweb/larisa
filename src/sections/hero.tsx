@@ -12,7 +12,7 @@ const Hero = () => {
                     <h2 className="text-[33px] md:text-[48px] xl:text-[48px] font-montserrat xl:mt-10 z-10 text-start leading-9 font-semibold">
                         {t('hero_doc_larina')}
                     </h2>
-                    <span className="absolute z-20 text-[50px] mt-3 text-[#14274E1A] leading-[55px] md:leading-[75px] md:text-[75px] md:-top-8 xl:text-[108px] md:p-4 xl:p-0 xl:leading-[250px] font-montserrat font-medium xl:text-justify max-full xl:whitespace-pre-wrap">{t('hero_doc_fullname')}</span>
+                    <span className="absolute z-20 text-[50px] text-[#14274E1A] leading-[55px] md:leading-[75px] md:text-[75px] md:-top-8 xl:text-[108px] md:p-4 xl:p-0 xl:leading-[250px] font-montserrat font-medium xl:text-justify max-full xl:whitespace-pre-wrap">{t('hero_doc_fullname')}</span>
                 </div>
 
                 <div className="flex justify-between items-start md:items-end mt-14 md:mt-28 xl:mt-24">
