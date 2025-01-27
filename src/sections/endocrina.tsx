@@ -3,7 +3,10 @@ import mobile from '@/assets/image/mobile.png'
 import desktop from '@/assets/image/dectop_e.png'
 import desktop_uz from '@/assets/image/desktop_e_uz.png'
 import mobile_uz from '@/assets/image/mobile_e_uz.png'
-import soglom from '@/assets/image/soglom.png'
+import ed1 from '@/assets/image/ed1.png'
+import ed2 from '@/assets/image/ed2.png'
+import ed3 from '@/assets/image/semiz.png'
+import ed4 from '@/assets/image/ed4.png'
 
 const Endocrina = () => {
     const {t, i18n} = useTranslation()
@@ -25,19 +28,19 @@ const Endocrina = () => {
                         </>}
                         <ul className="-mt-16 md:-mt-28 flex flex-col md:flex-row md:flex-wrap md:justify-between space-y-3 md:space-y-0 md:gap-5 pb-5 px-4 xl:w-[55%] xl:mt-[0px] xl:py-0 xl:px-4">
                             <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
-                                <img src={soglom} alt="soglom bo'l" />
+                                <img src={ed1} alt="soglom bo'l" />
                                 <p className="text-[14px] md:text-[16px]">{t('endoc_1')}</p>
                             </li>
                             <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] xl:w-[320px]">
-                                <img src={soglom} alt="soglom bo'l" />
+                                <img src={ed2} alt="soglom bo'l" />
                                 <p className="text-[14px] md:text-[16px]">{t('endoc_2')}</p>
                             </li>
                             <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
-                                <img src={soglom} alt="soglom bo'l" />
+                                <img src={ed3} alt="soglom bo'l" />
                                 <p className="text-[14px] md:text-[16px]">{t('endoc_3')}</p>
                             </li>
                             <li className="flex items-center gap-x-5 w-[328px] md:w-[322px] !xl:w-[320px]">
-                                <img src={soglom} alt="soglom bo'l" />
+                                <img src={ed4} alt="soglom bo'l" />
                                 <p className="text-[14px] md:text-[16px]">{t('endoc_4')}</p>
                             </li>
                         </ul>

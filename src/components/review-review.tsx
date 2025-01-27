@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 // @ts-expect-error
 import "swiper/css/pagination";
-import user from '@/assets/image/review-user.jpg'
+import user from '@/assets/image/user-icon.jpg'
 import star from '@/assets/image/star.png'
 import prev from '@/assets/image/prev.png'
 import next from '@/assets/image/next.png'
@@ -30,73 +30,73 @@ const ReviewSwiper: React.FC = () => {
         {
             id: 1,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_1'),
             description: t('commit_1')
         },
         {
-            id: 1,
+            id: 2,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_2'),
             description: t('commit_2')
         },
         {
-            id: 1,
+            id: 3,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_3'),
             description: t('commit_3')
         },
         {
-            id: 1,
+            id: 4,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_4'),
             description: t('commit_4')
         },
         {
-            id: 1,
+            id: 5,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_5'),
             description: t('commit_5')
         },
         {
-            id: 1,
+            id: 6,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_6'),
             description: t('commit_6')
         },
         {
-            id: 1,
+            id: 7,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_7'),
             description: t('commit_7')
         },
         {
-            id: 1,
+            id: 8,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_8'),
             description: t('commit_8')
         },
         {
-            id: 1,
+            id: 9,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_9'),
             description: t('commit_9')
         },
         {
-            id: 1,
+            id: 10,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_10'),
             description: t('commit_10')
         },
         {
-            id: 1,
+            id: 11,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_11'),
             description: t('commit_11')
         },
         {
-            id: 1,
+            id: 12,
             image: user,
-            title: t('service_card1'),
+            title: t('review_user_12'),
             description: t('commit_12')
         },
     ];
