@@ -10,20 +10,21 @@ import { orderPost } from '@/utils/post';
 import { useMutation } from '@tanstack/react-query';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
+import ToasModal from './toas-modal';
 
 const ServiceSign= () => {
     const { t} = useTranslation()
     const [open, setOpen] = useState(false)
+    const [toasInfo, setToasInfo] = useState(false)
     const addOrder = useMutation({
         mutationFn: orderPost.postOrder,
         onSuccess: () => {
-            toast.success("Success")
             setOpen(false)
             const formElement = document.querySelector('form');
             if (formElement) {
                 formElement.reset();
             }
+            setTimeout(()=>setToasInfo(true), 500)       
         },
         onError: (err)=> {
                 console.log(err);                
@@ -41,7 +42,7 @@ const ServiceSign= () => {
     );
         console.log(addOrder.variables);
     };
-    return (
+    return (<>
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className='absolute text-[#C9A690] p-2 px-7 bottom-10 md:bottom-14 md:right-14 xl:right-10 font-bold outline-none border border-[#C9A690] rounded-full'>
             {t('sign')}
@@ -73,7 +74,8 @@ const ServiceSign= () => {
                 </DialogHeader>
             </DialogContent>
         </Dialog>
-
+        <ToasModal openModal={toasInfo} setToasInfo={setToasInfo}/>
+        </>
     );
 };
 

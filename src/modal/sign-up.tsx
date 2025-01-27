@@ -11,20 +11,21 @@ import { useMutation } from '@tanstack/react-query';
 import { MoveRight } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
+import ToasModal from './toas-modal';
 
 const SignUp = () => {
     const { t, i18n } = useTranslation()
     const [open, setOpen] = useState(false)
+    const [toasInfo, setToasInfo] = useState(false)
     const addOrder = useMutation({
         mutationFn: orderPost.postOrder,
         onSuccess: () => {
-            toast.success("Success")
             setOpen(false)
             const formElement = document.querySelector('form');
             if (formElement) {
                 formElement.reset();
             }
+            setTimeout(()=>setToasInfo(true), 500)       
         },
         onError: (err)=> {
                 console.log(err);                
@@ -42,7 +43,7 @@ const SignUp = () => {
     );
         console.log(addOrder.variables);
     };
-    return (
+    return (<>
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger className=''>
                 <p className="text-white text-[20px] md:text-[24px] xl:text-[20px] font-bold">{t('sign')}</p>
@@ -75,7 +76,8 @@ const SignUp = () => {
                 </DialogHeader>
             </DialogContent>
         </Dialog>
-
+        <ToasModal openModal={toasInfo} setToasInfo={setToasInfo}/>
+        </>
     );
 };
 

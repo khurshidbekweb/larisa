@@ -10,20 +10,21 @@ import { orderPost } from '@/utils/post';
 import { useMutation } from '@tanstack/react-query';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
+import ToasModal from './toas-modal';
 
 const NavSign= () => {
     const { t} = useTranslation()
     const [open, setOpen] = useState(false)
+    const [toasInfo, setToasInfo] = useState(false)
     const addOrder = useMutation({
         mutationFn: orderPost.postOrder,
         onSuccess: () => {
-            toast.success("Success")
             setOpen(false)
             const formElement = document.querySelector('form');
             if (formElement) {
                 formElement.reset();
             }
+            setTimeout(()=>setToasInfo(true), 500)       
         },
         onError: (err)=> {
                 console.log(err);                
@@ -41,10 +42,10 @@ const NavSign= () => {
     );
         console.log(addOrder.variables);
     };
-    return (
+    return (<>
         <Dialog open={open} onOpenChange={setOpen}>
-            <DialogTrigger className=''>
-            <p className='text-[#C9A690] hidden xl:block p-2 xl:w-[190px] text-center font-bold outline-none border border-[#C9A690] rounded-full xl:text-[16px]'>{t('sign')}</p>
+            <DialogTrigger className='hidden xl:block'>
+            <p className='text-[#C9A690] p-2 xl:w-[190px] text-center font-bold outline-none border border-[#C9A690] rounded-full xl:text-[16px]'>{t('sign')}</p>
             </DialogTrigger>
             <DialogContent className='xl:max-w-[680px] sm:max-w-[687px]'>
                 <DialogHeader>
@@ -73,7 +74,8 @@ const NavSign= () => {
                 </DialogHeader>
             </DialogContent>
         </Dialog>
-
+        <ToasModal openModal={toasInfo} setToasInfo={setToasInfo}/>
+        </>
     );
 };
 
