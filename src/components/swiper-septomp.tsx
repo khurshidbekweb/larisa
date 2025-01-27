@@ -30,7 +30,6 @@ const SwiperCarousel = () => {
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         loop={true}
-        
         breakpoints={{
           370: {
             width: 370,
@@ -48,10 +47,10 @@ const SwiperCarousel = () => {
             spaceBetween:15
           },
         }}
-        className="relative h-[350px] md:h-[420px]"
+        className="septom-swiper relative h-[350px] md:h-[420px]"
       >
         {SliderData.map((slide, index) => (
-          <SwiperSlide key={slide.id} className="opacity-100 rounded-[20px]">
+          <SwiperSlide key={slide.id} className="">
             <SlideItem
               image={slide.image}
               title={slide.title[lng]}
@@ -84,9 +83,9 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, isActive }) => {
   return (
     <div
       className={classNames(
-        "absolute top-1/2 transform -translate-y-1/2 transition-all duration-300 ease-in-out overflow-hidden rounded-[20px] shadow-lg",
+        "absolute top-1/2 transform -translate-y-1/2 transition-all bg-white duration-300 ease-in-out overflow-hidden rounded-[20px]",
     {
-      "left-0 w-[300px] md:w-[370px] xl:w-[350px] h-[80%] !md:h-[350px] z-30 cursor-pointer ": isActive,
+      "left-0 w-[300px] md:w-[370px] xl:w-[350px] h-[80%] !md:h-[350px] z-30 cursor-pointer shadow-none overflow-hidden": isActive,
       "left-[40px] md:left-[80px] xl:left-[70px] w-[200px] md:w-[270px] h-[80%] z-10 opacity-75": !isActive,
     }
   )}
@@ -96,7 +95,7 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, isActive }) => {
         src={image}
         loading='lazy'
         alt={title}
-        className="w-full h-full object-cover rounded-[20px]"
+        className="w-full h-full object-cover overflow-hidden rounded-[20px]"
       />
       <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#3679A4] to-transparent p-5">
         <h3 className="text-white text-lg text-[20px] md:text-[32px] font-semibold text-start">

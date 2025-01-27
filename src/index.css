@@ -122,4 +122,10 @@ body::-webkit-scrollbar{
   z-index: 10;
 }
 
-
+.septom-swiper .swiper-slide-active{
+  background-color: white;
+  margin-left: -1px;
+}
+.septom-swiper .swiper-slide-prev{
+  margin-right: 180px;
+}
