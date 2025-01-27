@@ -2,6 +2,7 @@ import logo from '@/assets/image/logo.png'
 import telegram from '@/assets/image/telegran.png'
 import phone from '@/assets/image/phone-footer.png'
 import { useTranslation } from 'react-i18next'
+import reultLogo from '@/assets/icons/result-logo.svg'
 
 const Footer = () => {
     const {t} = useTranslation()
@@ -56,7 +57,9 @@ const Footer = () => {
             <hr />
             <div className="max-w-7xl mx-auto flex justify-between items-center text-white xl:py-[35px] p-4">
                 <h4 className='text-[12px] md:text-[15px] xl:text-[16px] w-[150px] md:w-[80%]'>{t('footer_botton')}</h4>
-                <a href='https://result-me.uz/uz' className='text-[12px] md:text-[15px] xl:text-[16px]'>Result agency</a>
+                <a href='https://result-me.uz/uz' className='w-[120px]'>
+                    <img src={reultLogo} alt="logo result" />
+                </a>
             </div>
         </footer>
     );

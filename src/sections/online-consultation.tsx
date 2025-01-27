@@ -15,7 +15,7 @@ const Onlineonsultation = () => {
                     <ul className="flex flex-col md:flex-col xl:flex-col space-y-3 md:space-y-2 md:justify-end xl:space-y-4 md:ml-auto xl:ml-0 md:w-[60%] xl:w-[80%] xl:mt-4">
                         <li className="flex items-center gap-4">
                             <img src={one} alt="one" />
-                            <p className="text-[16px] md:text-[20px] xl:text-[24px]">{t('online_1')}</p>
+                            <p className="text-[16px] md:text-[20px] xl:text-[24px] z-10">{t('online_1')}</p>
                         </li>
                         <li className="flex items-center gap-4">
                             <img src={two} alt="one" />
