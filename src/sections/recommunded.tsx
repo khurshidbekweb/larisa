@@ -7,7 +7,7 @@ import soglom from '@/assets/image/soglom.png'
 import suyak from '@/assets/image/suyak.png'
 import oqsil from '@/assets/image/oqsil.png'
 import bakterya from '@/assets/image/bakterya.png'
-import bel_ogriq from '@/assets/image/bel_ogrigi.png'
+import bel_ogriq from '@/assets/image/bel_ogrigi_new.png'
 
 
 const Recommunded = () => {

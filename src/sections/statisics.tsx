@@ -7,7 +7,7 @@ const Statisics = () => {
     
     const statisicsInfo = [
         {
-            num: 12,
+            num: 15,
             title: t('statisics_age')
         },
         {

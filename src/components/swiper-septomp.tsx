@@ -59,7 +59,7 @@ const SwiperCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-between items-center w-[190px] md:w-[200px] absolute -bottom-1 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
+      <div className="flex justify-between items-center w-[200px] md:w-[220px] absolute -bottom-1 md:-bottom-2 z-20 left-1/2 transform -translate-x-1/2">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="z-50"
