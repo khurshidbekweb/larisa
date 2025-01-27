@@ -97,8 +97,8 @@ const SlideItem: React.FC<SlideItemProps> = ({ image, title, isActive }) => {
         alt={title}
         className="w-full h-full object-cover overflow-hidden rounded-[20px]"
       />
-      <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#3679A4] to-transparent p-5">
-        <h3 className="text-white text-lg text-[20px] md:text-[32px] font-semibold text-start">
+      <div className="absolute bottom-0 w-full bg-gradient-to-t from-[#3679A4] to-transparent p-4">
+        <h3 className="text-white text-lg text-[20px] md:text-[27px] font-semibold text-start">
           {title}
         </h3>
       </div>
