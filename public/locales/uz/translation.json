@@ -92,7 +92,7 @@
     "sum": "so‘m",
     "sum_1": "(agar oxirgi tayinlanganidan beri 1 oydan ko‘p vaqt o‘tgan bo‘lsa)",
     "sum_2": "(oxirgi tayinlanganidan keyingi 2 hafta ichida).",
-    "sum_3": "400 000 so‘m",
+    "sum_3": "200 000 so‘m",
     "sum_4": "420 000 so‘m",
     "sum_5": "1 000 000 so‘m",
     "more-info": "Batafsil ma’lumot",
@@ -107,7 +107,7 @@
     "modal_3_d": "Har bir bemorga individual yondashuv",
     "modal_4_t": "Davo tanlash",
     "modal_4_d": "Har bir bemorga individual yondashuv",
-    "modal_u": "Konsultatsiyani videomuloqot orqali yoki shaxsan olish mumkin. ",
+    "modal_u": "Xizmatga yozilmoqchimisiz yoki savol berishni xohlaysizmi? Ariza qoldiring, va biz siz bilan yaqin orada bog'lanamiz! ",
     "open_service": "Batafsil",
     "my_info_t": "Men haqimda",
     "my_info_d": "Qanday ishlayman?",
@@ -152,8 +152,8 @@
     "endoc_2": "Vaznni nazorat qiling",
     "endoc_3": "Vaznni nazorat qiling",
     "endoc_4": "Ovqatlanish nazoratini olib boring",
-    "online_t": "Onlayn konsultatsiyalar",
-    "online_d": "Konsultatsiyani videomuloqot yoki shaxsan olish mumkin. Konsultatsiyani mehribon shifokor o'tkazadi.",
+    "online_t": "Onlayn ro'yxatdan o'ting - biz siz bilan bog'lanamiz!",
+    "online_d": "Xizmatga yozilmoqchimisiz yoki savol berishni xohlaysizmi? Ariza qoldiring, va biz siz bilan yaqin orada bog'lanamiz!",
     "online_1": "Quyida ko'rsatilgan qulaylik",
     "online_2": "Vaqtni tejash",
     "contact": "Biz bilan bog'laning",
@@ -180,5 +180,5 @@
     "commit_10": "Hurmatli Larisa Yuriyevna! Professionalligingiz va samimiyligingiz uchun rahmat. Sizning maslahatlaringiz va davolashingiz har doim 100% ishlaydi, oziqlanish va vitaminlar bo‘yicha tavsiyalaringiz esa bizga kuch-quvvat beradi.",
     "commit_11": "Assalomu alaykum, Larisa Yuriyevna! Siz faqat tanani emas, balki ruhni ham davolaydigan shifokorsiz. Shikoyatlarimizga diqqat bilan yondashishingiz, samimiy uslubingiz va malakangiz sizni o‘ziga xos mutaxassisga aylantiradi. G‘amxo‘rligingiz va yordamingiz uchun rahmat!",
     "commit_12": "Larisa Yuriyevna, assalomu alaykum! Siz bizning oilamizning farishtasiz. Doim diqqat bilan tinglaysiz, samarali davolashni tayinlaysiz va aqlli maslahatlar berasiz. Mehnatingizni juda qadrlaymiz va har doim yonimizda ekanligingiz uchun minnatdormiz!",
-    "footer_botton":"2024 © Kim Larisa Yuryevna. Barcha huquqlar himoyalangan"
+    "footer_botton":"2025 © Kim Larisa Yuryevna. Barcha huquqlar himoyalangan"
 }

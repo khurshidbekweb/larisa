@@ -56,7 +56,7 @@ const MyService = ({desc, image, title, modalInfo, summa, mainImage}:propsServic
                 <DialogHeader>
                     <DialogTitle className="text-center">
                         <p className="text-[#C9A690] text-[14px] md:text-[16px] xl:text-[18px] font-bold">{t('my_service_t')}</p>
-                        <p className="text-[24px] md:text-[32px] xl:text-[40px] font-semibold">{t('my-service_de')}</p>
+                        <p className="text-[18px] md:text-[28px] xl:text-[32px] font-semibold">{title}</p>
                     </DialogTitle>
                     <DialogDescription className="xl:max-w-[90%] mx-auto">
                         <div className="mt-5 xl:flex xl:flex-row-reverse">

@@ -9,10 +9,9 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 
-import slide_image_1 from '@/assets/image/sertificate.png';
 import slide_image_2 from '@/assets/image/ser_d_2.png';
 import slide_image_3 from '@/assets/image/ser_d_3.png';
-import slide_image_4 from '@/assets/image/ser_d_4.png';
+// import slide_image_4 from '@/assets/image/ser_d_4.png';
 import slide_image_5 from '@/assets/image/ser_d_5.png';
 import slide_image_6 from '@/assets/image/ser_d_6.png';
 import slide_image_7 from '@/assets/image/ser_d_7.png';
@@ -40,10 +39,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 function SwiperTest() {
     const swiperRef = useRef<SwiperCore | null>(null);
     const swiperSertificate = [
-        { image: slide_image_1 },
-        { image: slide_image_2 },
         { image: slide_image_3 },
-        { image: slide_image_4 },
+        { image: slide_image_2 },
         { image: slide_image_5 },
         { image: slide_image_6 },
         { image: slide_image_7 },
