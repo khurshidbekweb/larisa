@@ -7,7 +7,7 @@ i18n
   .use(initReactI18next) // React bilan integratsiya
   .init({
     fallbackLng: localStorage.getItem('language') || 'ru', // Default til
-    debug: true, // Rivojlantirish jarayonida console loglar
+    debug: false, // Rivojlantirish jarayonida console loglar
     interpolation: {
       escapeValue: false, // XSS xavfsizligi (React buni avtomatik bajaradi)
     },

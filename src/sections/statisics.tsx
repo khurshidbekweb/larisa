@@ -25,7 +25,7 @@ const Statisics = () => {
                     <h3 className="w-[70px] md:w-20 text-[#C9A690] text-[14px] md:text-[16px] font-montserrat font-bold">{t('statisics_me')}</h3>
                     <p className="flex-1 text-[#A6A6A6] text-[14px] md:text-[18px] xl:text-[19px] xl:text-justify font-medium leading-5">
                     {lines.map((line, index) => (
-                        <p key={index}>{line}</p> 
+                        <span className="block" key={index}>{line}</span> 
                     ))}
                     </p>
                 </div>

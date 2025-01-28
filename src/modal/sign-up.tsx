@@ -44,8 +44,8 @@ const SignUp = () => {
     };
     return (<>
         <Dialog open={open} onOpenChange={setOpen}>
-            <DialogTrigger className=''>
-                <p className="text-white text-[20px] md:text-[24px] xl:text-[20px] font-bold">{t('sign')}</p>
+            <DialogTrigger className='flex items-center'>
+                <span className="block text-white text-[20px] md:text-[24px] xl:text-[20px] font-bold">{t('sign')}</span>
                 <MoveRight size={35} className={`text-white flex justify-center items-center ${i18n.language=='uz'?'hidden md:ml-24 xl:ml-20 md:block':'ml-10 md:ml-14 xl:ml-10'}`} />
             </DialogTrigger>
             <DialogContent className='xl:max-w-[680px] sm:max-w-[687px]'>
