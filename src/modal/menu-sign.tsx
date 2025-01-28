@@ -40,7 +40,6 @@ const MenuSign= () => {
             service: form.service.value,
         },
     );
-        console.log(addOrder.variables);
     };
     return (<>
         <Dialog open={open} onOpenChange={setOpen}>

@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 const Statisics = () => {
     const {t} = useTranslation()
     const lines = t('statisics_info').split("\n");
-    console.log(lines);
     
     const statisicsInfo = [
         {

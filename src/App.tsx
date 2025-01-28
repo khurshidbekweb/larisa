@@ -17,56 +17,54 @@ import Statisics from "./sections/statisics";
 import {BrowserRouter} from 'react-router-dom'
 import { Helmet, } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { orderPost } from "./utils/post";
 
 type LangKeys = "uz" | "ru";
 
 const App = () => {
   if(!localStorage.getItem('language')){
-    localStorage.setItem('language', 'ru')
-  }
+    localStorage.setItem('language', 'ru')  }
   const {i18n} = useTranslation()
-  // SEO text object
-const seoText = {
-  uz: {
-    title: "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
-    description:
-      "Endokrinolog Kim Larisa Yuryevna — integrativ va profilaktik tibbiyot bo‘yicha shifokor, nutrisiolog va IV-terapiya mutaxassisi. Prevent Age shifokorlari assotsiatsiyasi a’zosi. Endokrin tizim muammolarini aniqlash va davolash, shuningdek, sog‘lom turmush tarzini shakllantirish bo‘yicha maslahatlar. Sog‘lig‘ingizni ishonchli qo‘llarga topshiring.",
-    phone: "+(998) 90 941 85 49",
-    address: "Toshkent, Kichik Xalqa yo'li 51",
-  },
-  ru: {
-    title: "Эндокринолог Лариса Юрьевна Ким | Специалист по интегративной и профилактической медицине",
-    description:
-      "Эндокринолог Ким Лариса Юрьевна — врач интегративной и профилактической медицины, нутрициолог и специалист по IV-терапии. Член ассоциации врачей Prevent Age. Диагностика и лечение эндокринных заболеваний, а также консультации по формированию здорового образа жизни. Доверьте своё здоровье надёжным рукам.",
-    phone: "+(998) 90 941 85 49",
-    address: "Ташкент, Кичик Халка йули 51",
-  },
-};
+  const seoText = {
+    uz: {
+      title: "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
+      description:
+        "Endokrinolog Kim Larisa Yuryevna — integrativ va profilaktik tibbiyot bo‘yicha shifokor, nutrisiolog va IV-terapiya mutaxassisi. Prevent Age shifokorlari assotsiatsiyasi a’zosi. Endokrin tizim muammolarini aniqlash va davolash, shuningdek, sog‘lom turmush tarzini shakllantirish bo‘yicha maslahatlar. Sog‘lig‘ingizni ishonchli qo‘llarga topshiring.",
+      phone: "+(998) 90 941 85 49",
+      address: "Toshkent, Kichik Xalqa yo'li 51",
+    },
+    ru: {
+      title: "Эндокринолог Лариса Юрьевна Ким | Специалист по интегративной и профилактической медицине",
+      description:
+        "Эндокринолог Ким Лариса Юрьевна — врач интегративной и профилактической медицины, нутрициолог и специалист по IV-терапии. Член ассоциации врачей Prevent Age. Диагностика и лечение эндокринных заболеваний, а также консультации по формированию здорового образа жизни. Доверьте своё здоровье надёжным рукам.",
+      phone: "+(998) 90 941 85 49",
+      address: "Ташкент, Кичик Халка йули 51",
+    },
+  };  
+  const today = new Date().toISOString().split('T')[0]; // Faqat yil-oy-kun
+  const visitKey = `visited_${today}`;
+  // useMutation Hook tashqarida aniqlanadi
+  const visitSite = useMutation({
+    mutationFn: orderPost.countControl, // Backendga so'rov
+    onSuccess: () => {
+      console.log('Success: Bugungi tashrif hisobga olindi.');
+      localStorage.setItem(visitKey, 'true');
+    },
+    onError: (err) => {
+      console.error('Xato yuz berdi:', err);
+    },
+  });
+  useEffect(() => {
+    // Agar foydalanuvchi bugun tashrif buyurgan bo'lsa, hech narsa qilmaymiz
+    if (localStorage.getItem(visitKey)) {
+      console.log('Bugungi tashrif allaqachon hisoblangan.');
+      return;
+    }
+    visitSite.mutate({name: "WEB_SITE_VISIT"});
+  }, [visitKey, visitSite]);
 
-// useEffect(() => {
-//   const pathLang = window.location.pathname.split("/")[1];
-//   const storageLang = getLanguageFromStorageOrCookie();
-
-//   if (!["uz", "ru"].includes(pathLang)) {
-//     if (pathLang !== storageLang) {
-//       window.location.pathname = `/${storageLang}/`;
-//     }
-//   } else if (i18n.language !== pathLang) {
-//     i18n.changeLanguage(pathLang);
-//   }
-// }, []);
-
-// useEffect(() => {
-//   const recordVisit = async () => {
-//     try {
-//       await Axios.post("counter/add?button=VISIT");
-//     } catch (error) {
-//       console.error("Error recording visit:", error);
-//     }
-//   };
-
-//   recordVisit();
-// }, []);
 
 // Get current language SEO content
 const currentLang:LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set

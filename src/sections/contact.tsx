@@ -2,15 +2,26 @@ import { useTranslation } from "react-i18next";
 import phone from '@/assets/image/phone.png'
 import location from '@/assets/image/location.png'
 import time from '@/assets/image/time.png'
+import { useMutation } from "@tanstack/react-query";
+import { orderPost } from "@/utils/post";
 
 const Contact = () => {
     const {t} = useTranslation()
+    const countCall = useMutation({
+        mutationFn: orderPost.countControl,
+        onSuccess: ()=>{
+            console.log('success');            
+        },
+        onError: (err) => {
+            console.log(err);            
+        }
+    })
     return (
         <section id="contact" className=" relative mt-10 md:mt-14 xl:mt-20">
             <div className="recommunded-inner max-w-7xl mx-auto ">
                 <h4 className="text-[24px] xl:w-[850px] mx-auto font-semibold md:text-[32px] xl:text-[40px] text-center mt-5 md:mt-8 px-4">{t('contact')}</h4>
                 <ul className="flex flex-col space-y-3 items-start justify-center px-4 xl:flex-row xl:justify-between xl:items-center xl:mt-6">
-                    <li className="flex items-center gap-x-5">
+                    <li onClick={() => countCall.mutate({name: "PHONE_CALL"})} className="flex items-center gap-x-5">
                         <img src={phone} alt="telefon " />
                         <div className="flex flex-col space-y-2">
                             <p className="text-[14px] md:text-[18px] xl:text-[24px] font-semibold">{t('constact_1')}</p>
