@@ -31,18 +31,19 @@ const App = () => {
     uz: {
       title: "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
       description:
-        "Endokrinolog Kim Larisa Yuryevna — integrativ va profilaktik tibbiyot bo‘yicha shifokor, nutrisiolog va IV-terapiya mutaxassisi. Prevent Age shifokorlari assotsiatsiyasi a’zosi. Endokrin tizim muammolarini aniqlash va davolash, shuningdek, sog‘lom turmush tarzini shakllantirish bo‘yicha maslahatlar. Sog‘lig‘ingizni ishonchli qo‘llarga topshiring.",
+        "Endokrinolog Kim Larisa Yuryevna — integrativ va profilaktik tibbiyot bo‘yicha shifokor, nutrisiolog va IV-terapiya mutaxassisi. Prevent Age shifokorlari assotsiatsiyasi a’zosi. U nafaqat endokrin tizimning turli muammolarini aniqlash va davolashda, balki sog‘lom turmush tarzini shakllantirish, to‘g‘ri ovqatlanish va stressni boshqarish bo‘yicha maslahatlar berishda ham yetakchi mutaxassisdir. Har bir bemor uchun individual yondoshuvni qo‘llab-quvvatlaydi, shuningdek, zamonaviy tibbiyot va an’anaviy metodlarni uyg‘unlashtirib, sog‘likni yaxshilashga intiladi. Sog‘lig‘ingizni ishonchli qo‘llarga topshiring va bugundan boshlab yanada sog‘lom hayot kechirishni boshlang.",
       phone: "+(998) 90 941 85 49",
       address: "Toshkent, Kichik Xalqa yo'li 51",
     },
     ru: {
       title: "Эндокринолог Лариса Юрьевна Ким | Специалист по интегративной и профилактической медицине",
       description:
-        "Эндокринолог Ким Лариса Юрьевна — врач интегративной и профилактической медицины, нутрициолог и специалист по IV-терапии. Член ассоциации врачей Prevent Age. Диагностика и лечение эндокринных заболеваний, а также консультации по формированию здорового образа жизни. Доверьте своё здоровье надёжным рукам.",
+        "Эндокринолог Ким Лариса Юрьевна — врач интегративной и профилактической медицины, нутрициолог и специалист по IV-терапии. Член ассоциации врачей Prevent Age. Она не только занимается диагностикой и лечением различных эндокринных заболеваний, но также предоставляет консультации по формированию здорового образа жизни, правильному питанию и управлению стрессом. Ее подход к лечению включает индивидуальные рекомендации для каждого пациента, а также интеграцию современных медицинских технологий с традиционными методами. Доверьте свое здоровье надежным рукам и начните вести более здоровый образ жизни с сегодняшнего дня.",
       phone: "+(998) 90 941 85 49",
       address: "Ташкент, Кичик Халка йули 51",
     },
-  };  
+  };
+  
   const today = new Date().toISOString().split('T')[0]; // Faqat yil-oy-kun
   const visitKey = `visited_${today}`;
   // useMutation Hook tashqarida aniqlanadi
