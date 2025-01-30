@@ -77,6 +77,8 @@ const currentSEO = seoText[currentLang] || seoText.uz;
         <meta name="description" content={currentSEO.description} />
         <meta name="phone" content={currentSEO.phone} />
         <meta name="address" content={currentSEO.address} />
+        <meta name="yandex-verification" content="dc1a9192240cb928" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
       <>
         <Navbar/>
