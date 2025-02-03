@@ -14,8 +14,8 @@ import Semptomp from "./sections/semptomp";
 import Sertificate from "./sections/sertificate";
 import Services from "./sections/services";
 import Statisics from "./sections/statisics";
-import {BrowserRouter} from 'react-router-dom'
-import { Helmet, } from "react-helmet-async";
+import { BrowserRouter } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
@@ -24,9 +24,11 @@ import { orderPost } from "./utils/post";
 type LangKeys = "uz" | "ru";
 
 const App = () => {
-  if(!localStorage.getItem('language')){
-    localStorage.setItem('language', 'ru')  }
-  const {i18n} = useTranslation()
+  if (!localStorage.getItem('language')) {
+    localStorage.setItem('language', 'ru')
+  }
+
+  const { i18n } = useTranslation();
   const seoText = {
     uz: {
       title: "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
@@ -43,10 +45,10 @@ const App = () => {
       address: "Ташкент, Кичик Халка йули 51",
     },
   };
-  
+
   const today = new Date().toISOString().split('T')[0]; // Faqat yil-oy-kun
   const visitKey = `visited_${today}`;
-  // useMutation Hook tashqarida aniqlanadi
+  
   const visitSite = useMutation({
     mutationFn: orderPost.countControl, // Backendga so'rov
     onSuccess: () => {
@@ -56,45 +58,71 @@ const App = () => {
       console.error('Xato yuz berdi:', err);
     },
   });
+
+  useEffect(() => {
+    // Yandex.Metrika counter script
+    const script = document.createElement("script");
+    script.src = "https://mc.yandex.ru/metrika/tag.js";
+    script.async = true;
+    script.onload = () => {
+      window.ym(99727476, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    };
+    document.head.appendChild(script);
+
+    // Noscript fallback
+    const noscript = document.createElement("noscript");
+    const img = document.createElement("img");
+    img.src = "https://mc.yandex.ru/watch/99727476";
+    img.style.position = "absolute";
+    img.style.left = "-9999px";
+    noscript.appendChild(img);
+    document.body.appendChild(noscript);
+  }, []);
+
   useEffect(() => {  
     if (localStorage.getItem(visitKey)) {
       return;
     }
-    visitSite.mutate({name: "WEB_SITE_VISIT"});
+    visitSite.mutate({ name: "WEB_SITE_VISIT" });
   }, [visitKey, visitSite]);
 
+  const currentLang: LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set
+  const currentSEO = seoText[currentLang] || seoText.uz;
 
-// Get current language SEO content
-const currentLang:LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set
-const currentSEO = seoText[currentLang] || seoText.uz;
-
-  return (<BrowserRouter>
+  return (
+    <BrowserRouter>
       <Helmet>
         <title>{currentSEO.title}</title>
         <meta name="description" content={currentSEO.description} />
         <meta name="phone" content={currentSEO.phone} />
         <meta name="address" content={currentSEO.address} />
+        <meta name="yandex-verification" content="dc1a9192240cb928" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
       <>
-        <Navbar/>
-        <Hero/>
-        <Statisics/>
-        <Recommunded/>
-        <Semptomp/>
-        <Instruction/>
-        <Services/>
-        <MyInfo/>
-        <Advantage/>
-        <Reviews/>
-        <Instruction/>
-        <Faq/>
-        <Sertificate/>
-        <Endocrina/>
-        <Onlineonsultation/>
-        <Contact/>
-        <Footer/>
+        <Navbar />
+        <Hero />
+        <Statisics />
+        <Recommunded />
+        <Semptomp />
+        <Instruction />
+        <Services />
+        <MyInfo />
+        <Advantage />
+        <Reviews />
+        <Instruction />
+        <Faq />
+        <Sertificate />
+        <Endocrina />
+        <Onlineonsultation />
+        <Contact />
+        <Footer />
       </>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 };
 
