@@ -25,10 +25,10 @@ const Navbar = () => {
             <div className="navbar-inner md:max-w-7xl mx-auto container flex justify-between items-center py-2 md:py-3 px-2 xl:px-0">
                 <a href="/"><img className="logo text-white w-[125px] md:w-[187px]" src={logo} alt="logo-image" /></a>
                 <nav className='items-center text-white gap-x-7 text-[16px] font-normal hidden xl:flex'>
-                    <a onClick={()=>handleScroll('home')} className='xl:text-[18px]' href="#">{t('nav_one')}</a>
-                    <a onClick={() => handleScroll('services')} className='xl:text-[18px]' href="#">{t('nav_two')}</a>
-                    <a onClick={() => handleScroll('review')} className='xl:text-[18px]' href="#">{t('nav_three')}</a>
-                    <a onClick={() => handleScroll('contact')} className='xl:text-[18px]' href="#">{t('nav_four')}</a>
+                    <p onClick={()=>handleScroll('home')} className='xl:text-[18px] cursor-pointer'>{t('nav_one')}</p>
+                    <p onClick={() => handleScroll('services')} className='xl:text-[18px] cursor-pointer'>{t('nav_two')}</p>
+                    <p onClick={() => handleScroll('review')} className='xl:text-[18px] cursor-pointer'>{t('nav_three')}</p>
+                    <p onClick={() => handleScroll('contact')} className='xl:text-[18px] cursor-pointer'>{t('nav_four')}</p>
                 </nav>
                 <div className="flex items-center gap-x-4">
                     <select value={language} onChange={hanleLanguage} className='bg-inherit text-[18px] text-white outline-none'>

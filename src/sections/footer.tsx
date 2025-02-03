@@ -53,7 +53,7 @@ const Footer = () => {
                     </li>
                     <li className='flex flex-col items-start'>
                         <h2 className='text-[20px] md:text-[20px] xl:text-[24px] font-bold'>{t('nav_one')}</h2>
-                        <a onClick={()=> handleScroll('home')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-3' href="#">{t('nav_one')}</a>
+                        <p onClick={()=> handleScroll('home')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-3 cursor-pointer'>{t('nav_one')}</p>
                         <span onClick={() => handleScroll('contact')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('nav_four')}</span>
                         <span onClick={() => handleScroll('review')} className='text-[14px] md:text-[16px] xl:text-[18px] mt-2 cursor-pointer'>{t('reviews_t')}</span>
                     </li>
