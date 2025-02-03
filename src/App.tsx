@@ -50,17 +50,14 @@ const App = () => {
   const visitSite = useMutation({
     mutationFn: orderPost.countControl, // Backendga so'rov
     onSuccess: () => {
-      // console.log('Success: Bugungi tashrif hisobga olindi.');
       localStorage.setItem(visitKey, 'true');
     },
     onError: (err) => {
       console.error('Xato yuz berdi:', err);
     },
   });
-  useEffect(() => {
-    // Agar foydalanuvchi bugun tashrif buyurgan bo'lsa, hech narsa qilmaymiz
+  useEffect(() => {  
     if (localStorage.getItem(visitKey)) {
-      // console.log('Bugungi tashrif allaqachon hisoblangan.');
       return;
     }
     visitSite.mutate({name: "WEB_SITE_VISIT"});
