@@ -53,35 +53,39 @@ const App = () => {
     mutationFn: orderPost.countControl, // Backendga so'rov
     onSuccess: () => {
       localStorage.setItem(visitKey, 'true');
+      console.log(1);      
     },
     onError: (err) => {
       console.error('Xato yuz berdi:', err);
     },
   });
-
+  
   useEffect(() => {
-    // Yandex.Metrika counter script
     const script = document.createElement("script");
     script.src = "https://mc.yandex.ru/metrika/tag.js";
     script.async = true;
-    script.onload = () => {
-      window.ym(99727476, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-      });
-    };
     document.head.appendChild(script);
-
-    // Noscript fallback
-    const noscript = document.createElement("noscript");
-    const img = document.createElement("img");
-    img.src = "https://mc.yandex.ru/watch/99727476";
-    img.style.position = "absolute";
-    img.style.left = "-9999px";
-    noscript.appendChild(img);
-    document.body.appendChild(noscript);
+    
+    const observer = new MutationObserver(() => {
+      if (typeof window.ym === "function") {
+        window.ym(99727476, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+        });
+        observer.disconnect(); // Observerni to‘xtatish
+      }
+    });
+    
+    observer.observe(document.head, { childList: true, subtree: true });
+    
+    return () => {
+      document.head.removeChild(script);
+      observer.disconnect();
+    };
   }, []);
+  // document.cookie = "session=abcd1234; Secure; HttpOnly; SameSite=None";  
+  
 
   useEffect(() => {  
     if (localStorage.getItem(visitKey)) {
