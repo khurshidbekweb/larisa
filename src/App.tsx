@@ -14,7 +14,7 @@ import Semptomp from "./sections/semptomp";
 import Sertificate from "./sections/sertificate";
 import Services from "./sections/services";
 import Statisics from "./sections/statisics";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
@@ -24,21 +24,23 @@ import { orderPost } from "./utils/post";
 type LangKeys = "uz" | "ru";
 
 const App = () => {
-  if (!localStorage.getItem('language')) {
-    localStorage.setItem('language', 'ru')
+  if (!localStorage.getItem("language")) {
+    localStorage.setItem("language", "ru");
   }
 
   const { i18n } = useTranslation();
   const seoText = {
     uz: {
-      title: "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
+      title:
+        "Endokrinolog Larisa Yuryevna Kim | Integrativ va profilaktik tibbiyot mutaxassisi",
       description:
         "Endokrinolog Kim Larisa Yuryevna — integrativ va profilaktik tibbiyot bo‘yicha shifokor, nutrisiolog va IV-terapiya mutaxassisi. Prevent Age shifokorlari assotsiatsiyasi a’zosi. U nafaqat endokrin tizimning turli muammolarini aniqlash va davolashda, balki sog‘lom turmush tarzini shakllantirish, to‘g‘ri ovqatlanish va stressni boshqarish bo‘yicha maslahatlar berishda ham yetakchi mutaxassisdir. Har bir bemor uchun individual yondoshuvni qo‘llab-quvvatlaydi, shuningdek, zamonaviy tibbiyot va an’anaviy metodlarni uyg‘unlashtirib, sog‘likni yaxshilashga intiladi. Sog‘lig‘ingizni ishonchli qo‘llarga topshiring va bugundan boshlab yanada sog‘lom hayot kechirishni boshlang.",
       phone: "+(998) 90 941 85 49",
       address: "Toshkent, Kichik Xalqa yo'li 51",
     },
     ru: {
-      title: "Эндокринолог Лариса Юрьевна Ким | Специалист по интегративной и профилактической медицине",
+      title:
+        "Эндокринолог Лариса Юрьевна Ким | Специалист по интегративной и профилактической медицине",
       description:
         "Эндокринолог Ким Лариса Юрьевна — врач интегративной и профилактической медицины, нутрициолог и специалист по IV-терапии. Член ассоциации врачей Prevent Age. Она не только занимается диагностикой и лечением различных эндокринных заболеваний, но также предоставляет консультации по формированию здорового образа жизни, правильному питанию и управлению стрессом. Ее подход к лечению включает индивидуальные рекомендации для каждого пациента, а также интеграцию современных медицинских технологий с традиционными методами. Доверьте свое здоровье надежным рукам и начните вести более здоровый образ жизни с сегодняшнего дня.",
       phone: "+(998) 90 941 85 49",
@@ -46,26 +48,26 @@ const App = () => {
     },
   };
 
-  const today = new Date().toISOString().split('T')[0]; // Faqat yil-oy-kun
+  const today = new Date().toISOString().split("T")[0];
   const visitKey = `visited_${today}`;
-  
+
   const visitSite = useMutation({
     mutationFn: orderPost.countControl, // Backendga so'rov
     onSuccess: () => {
-      localStorage.setItem(visitKey, 'true');
-      console.log(1);      
+      localStorage.setItem(visitKey, "true");
+      console.log(1);
     },
     onError: (err) => {
-      console.error('Xato yuz berdi:', err);
+      console.error("Xato yuz berdi:", err);
     },
   });
-  
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://mc.yandex.ru/metrika/tag.js";
     script.async = true;
     document.head.appendChild(script);
-    
+
     const observer = new MutationObserver(() => {
       if (typeof window.ym === "function") {
         window.ym(99727476, "init", {
@@ -76,18 +78,16 @@ const App = () => {
         observer.disconnect(); // Observerni to‘xtatish
       }
     });
-    
+
     observer.observe(document.head, { childList: true, subtree: true });
-    
+
     return () => {
       document.head.removeChild(script);
       observer.disconnect();
     };
   }, []);
-  // document.cookie = "session=abcd1234; Secure; HttpOnly; SameSite=None";  
-  
 
-  useEffect(() => {  
+  useEffect(() => {
     if (localStorage.getItem(visitKey)) {
       return;
     }
