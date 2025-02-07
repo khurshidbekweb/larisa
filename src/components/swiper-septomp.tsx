@@ -21,6 +21,9 @@ const SwiperCarousel = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+
+
+  
   return (
     <div className="relative max-w-7xl mx-auto my-10 px-2">
       <Swiper
