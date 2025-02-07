@@ -92,7 +92,7 @@ const App = () => {
       return;
     }
     visitSite.mutate({ name: "WEB_SITE_VISIT" });
-  }, [visitKey, visitSite]);
+  }, []);
 
   const currentLang: LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set
   const currentSEO = seoText[currentLang] || seoText.uz;
