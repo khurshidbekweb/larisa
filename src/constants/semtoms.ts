@@ -8,17 +8,11 @@ import user6 from "@/assets/image/user6_.jpg";
 import user7 from "@/assets/image/user7.jpg";
 import user8 from "@/assets/image/user8.jpg";
 
-
-
-
-
 interface ISliderData {
   id: number;
   image: string;
   title: { ru: string; uz: string };
 }
-
-
 
 export const SliderData: ISliderData[] = [
   { id: 1, image: user1, title: { ru: "Слабость", uz: "Zaiflik" } },

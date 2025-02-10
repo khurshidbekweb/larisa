@@ -52,10 +52,10 @@ const App = () => {
   const visitKey = `visited_${today}`;
 
   const visitSite = useMutation({
-    mutationFn: orderPost.countControl, // Backendga so'rov
+    mutationFn: orderPost.countControl, 
     onSuccess: () => {
       localStorage.setItem(visitKey, "true");
-      console.log(1);
+      console.log("true");
     },
     onError: (err) => {
       console.error("Xato yuz berdi:", err);
@@ -90,8 +90,9 @@ const App = () => {
   useEffect(() => {
     if (localStorage.getItem(visitKey)) {
       return;
+    }else{
+      visitSite.mutate({ name: "WEB_SITE_VISIT" });
     }
-    visitSite.mutate({ name: "WEB_SITE_VISIT" });
   }, []);
 
   const currentLang: LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set
