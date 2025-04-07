@@ -32,6 +32,10 @@ import slide_image_21 from '@/assets/image/ser_d_21.png';
 import slide_image_22 from '@/assets/image/ser_d_22.png';
 import slide_image_23 from '@/assets/image/ser_d_23.png';
 import slide_image_24 from '@/assets/image/ser_d_24.png';
+import slide_image_25 from '@/assets/image/ser_d_25.jpg';
+
+
+
 import { useRef } from 'react';
 import SwiperCore from 'swiper';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -61,6 +65,7 @@ function SwiperTest() {
         { image: slide_image_22 },
         { image: slide_image_23 },
         { image: slide_image_24 },
+        { image: slide_image_25 },
     ];
 
     return (
@@ -100,6 +105,7 @@ function SwiperTest() {
                             className="w-full h-full object-contain"
                             src={el.image}
                             alt="slide_image"
+                            
                         />
                     </SwiperSlide>
                 ))}

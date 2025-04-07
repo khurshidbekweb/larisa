@@ -133,15 +133,17 @@ useEffect(() => {
         <Semptomp />
         <Instruction />
         <Services />
-        <MyInfo />
+        {/* <MyInfo /> */}
         <Advantage />
+        <Sertificate />
+
         <Reviews />
         <Instruction />
         <Faq />
-        <Sertificate />
-        <Endocrina />
         <Onlineonsultation />
-        <Contact />
+        <Endocrina />
+
+        {/* <Contact /> */}
         <Footer />
       </>
     </BrowserRouter>

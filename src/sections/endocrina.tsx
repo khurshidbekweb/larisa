@@ -11,7 +11,7 @@ import ed4 from '@/assets/image/ed4.png'
 const Endocrina = () => {
     const {t, i18n} = useTranslation()
     return (
-        <section className=" relative mt-10 md:mt-14 xl:mt-20">
+        <section className=" relative mt-10 md:mt-14 xl:mt-20 pb-[100px] lg:pb-[120px]">
             <div className="recommunded-inner">
                 <h2 className="text-[#C9A690] font-bold  text-[14px] md:text-[16px] text-center">{t('endoc_t')}</h2>
                 <h4 className="text-[24px] xl:w-[850px] mx-auto font-semibold md:text-[32px] xl:text-[40px] text-center mt-5 md:mt-8 px-4">{t('endoc_d')}</h4>

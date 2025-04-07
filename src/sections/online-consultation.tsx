@@ -7,7 +7,7 @@ import SignUp from "@/modal/sign-up";
 const Onlineonsultation = () => {
     const {t} = useTranslation()
     return (
-        <section className="mt-10 max-w-7xl mx-auto container px-2 md:mt-14 xl:mt-20">
+        <section className="mt-10 pb-20 max-w-7xl mx-auto container px-2 md:mt-14 xl:mt-20">
             <div className="my-info-inner relative  bg-[#1A5C7F99] rounded-[40px] xl:flex xl:flex-row-reverse p-4 overflow-hidden">
                 <div className="flex flex-col space-y-4 text-white p-3 xl:w-[60%]">
                     <h1 className="text-[24px] md:text-[32px] xl:text-[40px]">{t('online_t')}</h1>
@@ -21,6 +21,7 @@ const Onlineonsultation = () => {
                             <img src={two} alt="one" />
                             <p className="text-[16px] md:text-[20px] xl:text-[24px]">{t('online_2')}</p>
                         </li>
+                        
                     </ul>
                 </div>
                 <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px]">
