@@ -9,9 +9,10 @@ interface postOrder{
 interface countControl{
     name: 'PHONE_CALL' | 'WEB_SITE_VISIT'
 }
+
 export const orderPost = {
     postOrder: async ({firstName, lastName, phone, service}:postOrder) => {
-        const {data} = await axios.post('https://api.dr-larisa.uz.dr-larisa.uz/api/client', {
+        const {data} = await axios.post('https://api.larisa.bot.imed.uz.result-me.uz/api/client', {
             firstName, lastName, phone, service
         }, {
             headers: {
