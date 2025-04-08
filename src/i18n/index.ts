@@ -3,16 +3,18 @@ import { initReactI18next } from 'react-i18next';
 import HttpBackend from 'i18next-http-backend';
 
 i18n
-  .use(HttpBackend) // Tillarni fayldan yuklash
-  .use(initReactI18next) // React bilan integratsiya
+  .use(HttpBackend)
+  .use(initReactI18next) 
   .init({
-    fallbackLng: localStorage.getItem('language') || 'ru', // Default til
-    debug: false, // Rivojlantirish jarayonida console loglar
+    fallbackLng: localStorage.getItem('language') || 'ru',
+    debug: false,
     interpolation: {
-      escapeValue: false, // XSS xavfsizligi (React buni avtomatik bajaradi)
+      escapeValue: false, 
     },
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json', // Tillarni yuklash yo'li
+     localePath: typeof window === 'undefined'
+    ? require('path').resolve('./public/locales')
+    : '/locales',
     },
   });
 

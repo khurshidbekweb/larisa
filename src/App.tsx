@@ -91,7 +91,7 @@ useEffect(() => {
   }, []);
 
 
-  const currentLang: LangKeys = (i18n.language as LangKeys) || "ru";
+  const currentLang: LangKeys = (i18n.language as LangKeys) || "uz";
   const currentSEO = seoText[currentLang] || seoText.uz;
 
   return (
