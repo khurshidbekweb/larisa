@@ -23,7 +23,7 @@ import { RiTelegram2Fill } from "react-icons/ri";
 
 
 const HeroSign= () => {
-    const { t} = useTranslation()
+    const { t } = useTranslation()
     const [open, setOpen] = useState(false)
     const [toasInfo, setToasInfo] = useState(false)
     const addOrder = useMutation({
