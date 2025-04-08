@@ -2,6 +2,7 @@ import Larisa from '@/assets/image/larisa.png'
 import HeroSign from '@/modal/hero-sign';
 import { useTranslation } from 'react-i18next';
 
+
 const Hero = () => { 
     const {t} = useTranslation()   
     return (

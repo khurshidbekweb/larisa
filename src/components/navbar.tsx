@@ -49,12 +49,7 @@ const Navbar = () => {
           >
             {t("nav_three")}
           </p>
-          <p
-            onClick={() => handleScroll("contact")}
-            className="xl:text-[18px] cursor-pointer"
-          >
-            {t("nav_four")}
-          </p>
+          
         </nav>
         <div className="flex items-center gap-x-4">
           <select

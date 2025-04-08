@@ -16,8 +16,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { orderPost } from "./utils/post";
+
 
 type LangKeys = "uz" | "ru";
 
@@ -46,19 +45,8 @@ const App = () => {
     },
   };
 
-  const today = new Date().toISOString().split("T")[0];
-  const visitKey = `visited_${today}`;
 
-  const visitSite = useMutation({
-    mutationFn: orderPost.countControl, 
-    onSuccess: () => {
-      localStorage.setItem(visitKey, "true");
-      console.log("true");
-    },
-    onError: (err) => {
-      console.error("Xato yuz berdi:", err);
-    },
-  });
+  
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -73,7 +61,7 @@ const App = () => {
           trackLinks: true,
           accurateTrackBounce: true,
         });
-        observer.disconnect(); // Observerni to‘xtatish
+        observer.disconnect(); 
       }
     });
 
@@ -85,13 +73,7 @@ const App = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (localStorage.getItem(visitKey)) {
-      return;
-    }else{
-      visitSite.mutate({ name: "WEB_SITE_VISIT" });
-    }
-  }, []);
+  
 
 useEffect(() => {
     const gtmScript = document.createElement("script");
@@ -103,14 +85,13 @@ useEffect(() => {
     document.body.appendChild(gtmNoscript);
 
     return () => {
-      // Cleanup
       document.head.removeChild(gtmScript);
       document.body.removeChild(gtmNoscript);
     };
   }, []);
 
 
-  const currentLang: LangKeys = (i18n.language as LangKeys) || "uz"; // Fallback to "uz" if language is not set
+  const currentLang: LangKeys = (i18n.language as LangKeys) || "ru";
   const currentSEO = seoText[currentLang] || seoText.uz;
 
   return (
@@ -134,13 +115,11 @@ useEffect(() => {
         {/* <MyInfo /> */}
         <Advantage />
         <Sertificate />
-
         <Reviews />
         <Instruction />
         <Faq />
         <Onlineonsultation />
         <Endocrina />
-
         {/* <Contact /> */}
         <Footer />
       </>

@@ -15,7 +15,7 @@ import MenuSign from "@/modal/menu-sign";
 const Menu = () => {
     const {t} = useTranslation()
     const handleScroll = (id: string, close: () => void) => {
-        close(); // Modalni yopish
+        close(); 
         setTimeout(() => {
             const element = document.getElementById(id);
             if (element) {
@@ -45,9 +45,6 @@ const Menu = () => {
                         </SheetClose>
                         <SheetClose asChild>
                             <button onClick={() => handleScroll('review', () => document.body.click()) }  className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_three')}</button>
-                        </SheetClose>
-                        <SheetClose>
-                            <button onClick={() => handleScroll('contact', () => document.body.click())} className="text-[20px] md:text-[32px] font-semibold text-black">{t('nav_four')}</button>
                         </SheetClose>
                         <MenuSign/>
                     </SheetDescription>
